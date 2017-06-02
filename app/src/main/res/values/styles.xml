@@ -1,0 +1,91 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 登录提示对话框样式 -->
+    <style name="myDialog" parent="android:Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--背景是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!-- 耗时请求对话框样式 -->
+    <style name="requestDialog" parent="android:Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--背景是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="RunTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">6sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="RunMenuTextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/bombay</item>
+    </style>
+
+    <style name="RunMenuTextImage" parent="RunMenuTextView">
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="RunMenuText" parent="RunMenuTextView">
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+    <style name="TitleTextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:contentDescription">@string/app_name</item>
+    </style>
+
+    <style name="titleRightText">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="TroopsTextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/rangoon_green</item>
+    </style>
+
+    <style name="DiscoverText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/rangoon_green</item>
+    </style>
+    <style name="StatisticsRadioButton">
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:background">@drawable/sex_search_text</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/sex_rb</item>
+
+    </style>
+</resources>

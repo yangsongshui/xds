@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_set"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mercury"
+    android:orientation="vertical"
+    tools:context="com.pgt.xds.my.SetActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/title_color">
+
+        <RelativeLayout
+            android:id="@+id/left_layout"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/title_right_click_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/back" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="@string/set_msg"
+        android:textColor="@color/rangoon_green"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:padding="13dp"
+            android:text="@string/set_gprs"
+            android:textColor="@color/rangoon_green" />
+
+        <TextView
+            android:id="@+id/set_gprs_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="@string/set_on" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/set_gprs"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            toggle:sb_background="@color/rangoon_green"
+            toggle:sb_checked="true"
+            toggle:sb_checked_color="@color/title_color"
+            toggle:sb_shadow_radius="3dp"
+            toggle:sb_enable_effect="false"
+            toggle:sb_show_indicator="false"
+            toggle:sb_uncheck_color="@color/rangoon_green" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:padding="13dp"
+            android:text="@string/set_prevent"
+            android:textColor="@color/rangoon_green" />
+
+        <TextView
+            android:id="@+id/set_prevent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="@string/set_off" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/set_prevent"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            toggle:sb_background="@color/rangoon_green"
+            toggle:sb_checked_color="@color/title_color"
+            toggle:sb_shadow_radius="3dp"
+            toggle:sb_enable_effect="false"
+            toggle:sb_show_indicator="false"
+            toggle:sb_uncheck_color="@color/rangoon_green" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:padding="13dp"
+            android:text="@string/set_voice"
+            android:textColor="@color/rangoon_green" />
+
+        <TextView
+            android:id="@+id/set_voice_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="@string/set_off" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/set_voice"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            toggle:sb_background="@color/rangoon_green"
+            toggle:sb_checked_color="@color/title_color"
+            toggle:sb_shadow_radius="3dp"
+            toggle:sb_show_indicator="false"
+            toggle:sb_enable_effect="false"
+            toggle:sb_uncheck_color="@color/rangoon_green" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:padding="13dp"
+            android:text="@string/set_bright"
+            android:textColor="@color/rangoon_green" />
+
+        <TextView
+            android:id="@+id/set_bright_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="@string/set_on" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/set_bright"
+            android:layout_width="50dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+
+            toggle:sb_background="@color/rangoon_green"
+            toggle:sb_checked="true"
+            toggle:sb_checked_color="@color/title_color"
+            toggle:sb_enable_effect="false"
+            toggle:sb_shadow_radius="3dp"
+            toggle:sb_show_indicator="false"
+            toggle:sb_uncheck_color="@color/rangoon_green" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/set_seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/club_btn_bg"
+        android:padding="13dp"
+        android:text="@string/set_seek"
+        android:textColor="@color/rangoon_green" />
+
+    <TextView
+        android:id="@+id/set_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/club_btn_bg"
+        android:padding="13dp"
+        android:text="@string/set_about"
+        android:textColor="@color/rangoon_green" />
+</LinearLayout>

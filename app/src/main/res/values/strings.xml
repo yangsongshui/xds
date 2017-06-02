@@ -1,0 +1,200 @@
+<resources>
+    <string name="app_name">喜德盛</string>
+
+    <!-- 登录，注册，忘记密码 -->
+    <string name="phone_number_login">手机号登录</string>
+    <string name="register">注册</string>
+    <string name="phone_number">手机号</string>
+    <string name="password">密码</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="login">登录</string>
+    <string name="verification_code">验证码</string>
+    <string name="please_input_verification_code">请输入验证码</string>
+    <string name="get_verification_code">获取验证码</string>
+    <string name="i_agree">我已阅读，并同意</string>
+    <string name="user_agreement">《用户注册协议》</string>
+    <string name="next">下一步</string>
+    <string name="nickname">昵称</string>
+    <string name="gender">性别</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="birthday">生日</string>
+    <string name="birthday_hint">YY/MM/DD</string>
+    <string name="skip">跳过 >></string>
+    <string name="complete">完成</string>
+    <string name="forget_password_title">忘记密码</string>
+    <string name="reset_password">重置密码</string>
+    <string name="please_reset_password">请重置密码</string>
+    <string name="again_input">再次输入</string>
+
+    <!-- 主界面 -->
+    <string name="find_car">找车</string>
+    <string name="main_run">骑行</string>
+    <string name="main_club">俱乐部</string>
+    <string name="main_discover">发现</string>
+    <string name="main_my">我的</string>
+
+
+    <!--run-->
+    <string name="run_linear">均速</string>
+    <string name="linear">Km/h</string>
+    <string name="run_mileage">里程</string>
+    <string name="mileage">Km</string>
+    <string name="run_time">时间</string>
+
+    <string name="run_cadence">踏频</string>
+    <string name="cadence">rpm</string>
+    <string name="run_calorie">卡路里</string>
+    <string name="calorie">KCal</string>
+    <string name="run_heart">心率</string>
+    <string name="heart">Bpm</string>
+    <string name="run_pause">暂停</string>
+    <string name="run_begin">开始</string>
+    <string name="riding_current_time">16:04</string>
+    <string name="riding_current_date">2017.05.04</string>
+    <string name="riding_current_week">星期六</string>
+    <string name="riding_sunny_weather">天气晴</string>
+    <string name="riding_temperature">0℃</string>
+    <string name="riding_sun_mileage">骑行总里程</string>
+    <string name="riding_constant_speed">匀速</string>
+    <string name="riding_max_speed">最高时速</string>
+    <string name="riding_total_time">骑行总时长</string>
+    <string name="riding_state_navigation">导航</string>
+    <string name="riding_temperature_text">摄氏度</string>
+    <string name="riding_speed_per_hour">Speed per hour</string>
+    <string name="riding_temperature_unit">Km/h</string>
+    <!--navigation-->
+    <string name="navigation_time">运动时间</string>
+    <string name="navigation_speed"> 即时速度</string>
+    <string name="navigation_mileage"> 已行历程</string>
+
+    <!--club-->
+    <string name="club_competition">赛事</string>
+
+    <string name="club_competition_msg">带你亲临赛事现场</string>
+    <string name="riding_troops">骑行队</string>
+    <string name="riding_troops_msg">加入骑行队</string>
+    <string name="my_competition">我的赛事</string>
+    <string name="troops_add">新建</string>
+    <string name="troops_recommend">推荐骑行队</string>
+    <string name="troops_my">我的骑行队</string>
+    <string name="troops_id">ID</string>
+    <string name="troops_num">人数</string>
+    <string name="troops_search">搜索骑行队名称/ID</string>
+    <string name="troops_new">创建骑行队</string>
+    <string name="troops_new_pic">添加骑行队封面</string>
+    <string name="troops_name_msg">起个好名字,让骑行队更有吸引力</string>
+    <string name="troops_name_hint">请输入名称</string>
+    <string name="troops_introduce_msg">骑行队简介</string>
+    <string name="troops_introduce_hint">请输入简介</string>
+    <string name="troops_introduce_entrance">进入骑行队</string>
+    <string name="troops_introduce_invite">邀请好友加入</string>
+    <!--discover-->
+    <string name="discover_mall">官方商城</string>
+    <string name="discover_mall_msg">更高,更远,更强，我们从未停止过</string>
+    <string name="discover_jd">京东旗舰店</string>
+    <string name="discover_jd_msg">点击即可进入京东喜德盛旗舰店！</string>
+    <string name="discover_inquire">门市查询</string>
+    <string name="discover_inquire_msg">全国均有零售网点,真诚为每一位车友服务</string>
+    <string name="inquire">查找门店:</string>
+    <string name="inquire_province">省份</string>
+    <string name="inquire_city">城市</string>
+    <string name="inquire_select">请选择</string>
+
+    <!--My-->
+    <string name="compile_info">编辑个人简介</string>
+    <string name="my_mileage">总里程</string>
+    <string name="my_time">总时间</string>
+    <string name="my_calorie">总卡路里</string>
+    <string name="my_history">历史记录</string>
+    <string name="my_statistics">骑行统计</string>
+    <string name="my_bicycle">我的单车</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="my_indent">订单详情</string>
+    <string name="my_km">(Km)</string>
+    <string name="cal">(Cal)</string>
+    <string name="my_info">个人信息</string>
+    <string name="my_pic">头像</string>
+    <string name="my_name">用户名</string>
+    <string name="my_phone">手机号码</string>
+    <string name="my_sex">性别</string>
+    <string name="my_height">身高</string>
+    <string name="my_weight">体重</string>
+    <string name="my_age">年龄</string>
+    <string name="my_address">所在地</string>
+    <string name="my_kg">Kg</string>
+    <string name="my_years">岁</string>
+    <string name="my_cm">cm</string>
+    <string name="compile_photo">相册</string>
+    <string name="compile_camera">相机</string>
+    <string name="compile_cancel">取消</string>
+    <string name="compile_name">更改用户名</string>
+    <string name="compile_phone">更换手机号</string>
+    <string name="compile_birthday">出生日期</string>
+    <string name="compile_address">地区选择</string>
+    <string name="compile_state">国家</string>
+    <string name="compile_city">省市</string>
+    <string name="compile_sex">请选择性别</string>
+    <string name="search_birthday">选择出生日期</string>
+    <string name="search_address">使用当前地址</string>
+    <string name="compile_boy">男</string>
+    <string name="compile_girl">女</string>
+    <string name="compile_day">天</string>
+    <string name="compile_week">周</string>
+    <string name="compile_month">月</string>
+    <string name="marker_mileage">里程:</string>
+    <string name="marker_time">时间:</string>
+    <string name="marker_min">min</string>
+    <!--设置-->
+    <string name="set">设置</string>
+    <string name="set_msg">基本设置</string>
+    <string name="set_gprs">GPRS</string>
+    <string name="set_prevent">防盗</string>
+    <string name="set_voice">语音播报</string>
+    <string name="set_bright">运动中屏幕常亮</string>
+    <string name="set_seek">找车</string>
+    <string name="set_about">关于</string>
+    <string name="set_on">已开启</string>
+    <string name="set_off">未开启</string>
+    <!--dialog-->
+    <string name="loading">正在加载...</string>
+    <string name="network_hint">提示</string>
+    <string name="network_message">无网络</string>
+    <string name="countersign">确认</string>
+    <string name="hint">提示</string>
+    <string name="fail_to_get">获取验证码失败</string>
+    <string name="invalid_code">无效的验证码</string>
+    <string name="photograph">拍照</string>
+    <string name="photo_album">从相册选择</string>
+    <string name="cancel">取消</string>
+    <string name="exit">退出</string>
+    <string name="socket_timeout_error">服务器响应超时</string>
+    <string name="connect_error">网络连接异常，请检查网络</string>
+    <string name="runtime_error">运行时错误</string>
+    <string name="unknown_host_please_check_network">无法解析主机，请检查网络连接</string>
+    <string name="unknown_error">未知的服务器错误</string>
+    <string name="bicycle_is_in_use">单车正在使用中</string>
+    <string name="bicycle_has_been_damaged">单车已损坏</string>
+    <string name="bicycle_has_been_scrapped">单车已报废</string>
+    <string name="bicycle_has_been_reservation">单车已被预约</string>
+    <string name="bike_lock_success">单车解锁成功</string>
+    <string name="has_a_bike_of_appointment">已有预约的单车</string>
+    <string name="not_through_the_certification">未通过认证</string>
+    <string name="not_sufficient_funds">余额不足</string>
+    <string name="unpaid_orders">有未支付的订单</string>
+    <string name="qq">QQ</string>
+    <string name="wechat">微信</string>
+    <string name="friend">朋友圈</string>
+    <!--toast-->
+    <string name="not_null">内容不能为空</string>
+    <string name="phone_incorrectness">手机号码不正确</string>
+    <string name="code_is_not_correct">验证码不正确</string>
+    <string name="data_null">数据不存在</string>
+    <string name="data_already_existing">数据已存在</string>
+    <string name="missing_parameter">缺少参数</string>
+    <string name="service_error">服务器异常</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

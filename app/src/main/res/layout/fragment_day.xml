@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pgt.xds.my.DayFragment">
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/day_chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:paddingRight="10dp" />
+</LinearLayout>

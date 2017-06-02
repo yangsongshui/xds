@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#0061B2</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 标题栏颜色 -->
+    <color name="title_color">#0061B2</color>
+    <!-- 标题栏按下颜色 -->
+    <color name="title_color_select_color">#033761</color>
+    <!-- 透明颜色 -->
+    <color name="transparency">#00000000</color>
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <color name="input_color">#F0F0F0</color>
+    <color name="forget_password_color">#E60515</color>
+    <color name="forget_password_color_pressed">#7D040D</color>
+    <color name="gray">#A0A0A0</color>
+    <color name="btn_no_click">#BDBEC0</color>
+    <color name="main_botm_color">#171717</color>
+    <color name="green_color">#00FF01</color>
+
+    <color name="mahogany">#b9c54549</color>
+    <color name="bombay">#B0B4B6</color>
+    <color name="mercury">#E6E6E6</color>
+    <color name="magnesium">#B2B2B2</color>
+    <color name="rangoon_green">#1B1B1B</color>
+    <color name="gray1">#7F8081</color>
+    <color name="gray_chateau">#A1A1A2</color>
+    <color name="armadillo">#484848</color>
+    <color name="zircon">#DFDFE5</color>
+    <color name="gallery">#F0F0F0</color>
+    <color name="endeavour">#0052A8</color>
+    <color name="verdigris">#4DAFAA</color>
+    <color name="glitter">#E7EFF7</color>
+</resources>
+

@@ -145,6 +145,21 @@
     <string name="marker_mileage">里程:</string>
     <string name="marker_time">时间:</string>
     <string name="marker_min">min</string>
+    <!--骑行统计-->
+    <string name="statistics_week">本周统计</string>
+    <string name="statistics_day">今日统计</string>
+    <string name="statistics_month">本月统计</string>
+    <string name="statistics_time">骑行时间</string>
+    <string name="statistics_time2">骑行时间(min)</string>
+    <string name="statistics_run">骑行里程</string>
+    <string name="statistics_run2">骑行里程(km)</string>
+    <string name="statistics_num">骑行次数</string>
+    <string name="statistics_speed">最大速度(km/h)</string>
+    <string name="statistics_Kcal">消耗热量</string>
+    <string name="statistics_Kcal2">消耗热量(kCal)</string>
+    <string name="statistics_good">最佳成绩</string>
+    <string name="statistics_times">times</string>
+    <string name="statistics_cal">Cal</string>
     <!--设置-->
     <string name="set">设置</string>
     <string name="set_msg">基本设置</string>

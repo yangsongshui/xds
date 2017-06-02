@@ -16,12 +16,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:text="@string/marker_mileage"
                 android:textColor="@color/white"
@@ -31,9 +31,9 @@
                 android:id="@+id/marker_mileage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23"
+                android:text=" 12"
                 android:textColor="@color/white"
-                android:textSize="5sp" />
+                android:textSize="7sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -62,9 +62,9 @@
                 android:id="@+id/marker_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="123"
+                android:text="121"
                 android:textColor="@color/white"
-                android:textSize="5sp" />
+                android:textSize="7sp" />
 
             <TextView
                 android:layout_width="wrap_content"

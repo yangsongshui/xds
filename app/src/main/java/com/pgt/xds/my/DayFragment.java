@@ -4,23 +4,30 @@ package com.pgt.xds.my;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+import com.github.mikephil.charting.utils.Utils;
 import com.pgt.xds.BaseFragment;
 import com.pgt.xds.R;
+import com.pgt.xds.utils.DateUtil;
 import com.pgt.xds.view.MyMarkerView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 import butterknife.BindView;
 
@@ -28,19 +35,35 @@ import butterknife.BindView;
  * A simple {@link Fragment} subclass.
  */
 public class DayFragment extends BaseFragment implements OnChartValueSelectedListener {
-
+    private int DAY = 1;
+    private int WEEK = 2;
+    private int MONTH = 3;
     @BindView(R.id.day_chart)
     LineChart mChart;
+    @BindView(R.id.run_mileage)
+    TextView runMileage;
+    @BindView(R.id.run_time)
+    TextView runTime;
 
-    public DayFragment() {
-        // Required empty public constructor
+    List<Integer> time;
+    List<Integer> data;
+    int type = 1;
+
+    public DayFragment(List<Integer> time, List<Integer> data, int type) {
+        this.time = time;
+        this.data = data;
+        this.type = type;
     }
 
+    public DayFragment() {
+
+    }
 
     @Override
     protected void initData(View layout, Bundle savedInstanceState) {
         initChart();
     }
+
 
     @Override
     protected int getContentView() {
@@ -59,9 +82,6 @@ public class DayFragment extends BaseFragment implements OnChartValueSelectedLis
         Description description = new Description();
         description.setText("");
         mChart.setDescription(description);
-
-        //设置透明度
-        // mChart.setAlpha(0.8f);
         //设置是否可以触摸，如为false，则不能拖动，缩放等
         mChart.setTouchEnabled(true);
         //设置是否可以拖拽
@@ -73,31 +93,12 @@ public class DayFragment extends BaseFragment implements OnChartValueSelectedLis
         mChart.setPinchZoom(false);
         //设置四个边的间距
         mChart.setExtraOffsets(0, 30, 10, 0);
-       // mChart.set
-        //隐藏Y轴
-        mChart.getAxisRight().setEnabled(true);
-        mChart.getAxisRight().setDrawGridLines(false);
-        //不画网格
-        // mChart.getAxisLeft().setDrawGridLines(false);
-        mChart.getAxisLeft().setAxisMaximum(25);
-        mChart.getAxisLeft().setLabelCount(5, false);
-
-        //  mChart.getAxisLeft().setAxisMinimum(0);
-        mChart.getAxisLeft().setTextColor(R.color.gray1);
-        mChart.getAxisLeft().setAxisMinimum(0);
-
-        XAxis xAxis = mChart.getXAxis();
-        xAxis.setTextColor(R.color.gray1);
-        xAxis.setAxisMaximum(15);
-        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);//设置X轴在底部
-        xAxis.setLabelCount(5);
         mChart.getLegend().setEnabled(false);
-
-        MyMarkerView mv = new MyMarkerView(getActivity(), R.layout.custom_marker_view);
+        //设置XY轴
+        initXYAxis();
+        MyMarkerView mv = new MyMarkerView(getActivity(), R.layout.custom_marker_view, time);
         mv.setChartView(mChart);
         mChart.setMarker(mv);
-        //data.setValueTypeface(mTfLight);
-
         mChart.setOnChartValueSelectedListener(this);
         mChart.setData(getdayData());
 
@@ -105,60 +106,10 @@ public class DayFragment extends BaseFragment implements OnChartValueSelectedLis
     }
 
     private LineData getdayData() {
-
-
-        IAxisValueFormatter formatter = new IAxisValueFormatter() {
-            String[] day = new String[]{"07:00", "08:00", "09:00", "10:00", "11:00"
-                    , "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"};
-
-            @Override
-            public String getFormattedValue(float value, AxisBase axis) {
-                return day[(int) value % day.length];
-            }
-
-
-        };
-        IAxisValueFormatter formatter1 = new IAxisValueFormatter() {
-            String[] day1 = new String[]{"", "25km", "20km", "15km", "10km", "5km"};
-
-            @Override
-            public String getFormattedValue(float value, AxisBase axis) {
-                return day1[(int) value % day1.length];
-            }
-
-
-        };
-        IAxisValueFormatter formatter2 = new IAxisValueFormatter() {
-
-
-            @Override
-            public String getFormattedValue(float value, AxisBase axis) {
-                return "";
-            }
-
-
-        };
-        mChart.getAxisLeft().setValueFormatter(formatter1);
-        mChart.getAxisRight().setValueFormatter(formatter2);
-        mChart.getXAxis().setValueFormatter(formatter);
         ArrayList<Entry> values1 = new ArrayList<>();
-        values1.add(new Entry(0, 2));
-        values1.add(new Entry(1, 4));
-        values1.add(new Entry(2, 5));
-        values1.add(new Entry(3, 16));
-        values1.add(new Entry(4, 14));
-        values1.add(new Entry(5, 12));
-        values1.add(new Entry(6, 8));
-        values1.add(new Entry(7, 6));
-        values1.add(new Entry(8, 16));
-        values1.add(new Entry(9, 2));
-        values1.add(new Entry(10, 17));
-        values1.add(new Entry(11, 25));
-        values1.add(new Entry(12, 11));
-        values1.add(new Entry(13, 17));
-        values1.add(new Entry(14, 22));
-        values1.add(new Entry(15, 21));
-
+        for (int i = 0; i < data.size(); i++) {
+            values1.add(new Entry(i, data.get(i)));
+        }
 
         LineDataSet set1;
         if (mChart.getData() != null &&
@@ -189,11 +140,114 @@ public class DayFragment extends BaseFragment implements OnChartValueSelectedLis
 
     @Override
     public void onValueSelected(Entry e, Highlight h) {
-
+        runMileage.setText( Utils.formatNumber(e.getY(), 0, true));
+        runTime.setText(String.valueOf(time.get((int) e.getX())));
     }
 
     @Override
     public void onNothingSelected() {
 
+    }
+
+    private void initXYAxis() {
+        YAxis mAxisLeft = mChart.getAxisLeft();
+        YAxis mAxisRight = mChart.getAxisRight();
+        XAxis xAxis = mChart.getXAxis();
+        IAxisValueFormatter formatter = null;
+        IAxisValueFormatter formatter1 = new IAxisValueFormatter() {
+            String[] day1 = new String[]{"", "25km", "20km", "15km", "10km", "5km"};
+
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                return day1[(int) value % day1.length];
+            }
+
+
+        };
+        IAxisValueFormatter formatter2 = new IAxisValueFormatter() {
+
+
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                return "";
+            }
+
+
+        };
+        //设置坐标文字
+        mAxisLeft.setValueFormatter(formatter1);
+        mAxisRight.setValueFormatter(formatter2);
+        //隐藏右边Y轴网格线
+        mAxisRight.setDrawGridLines(false);
+        //设置Y轴最大最小数据
+        mAxisLeft.setAxisMaximum(25);
+        mAxisLeft.setAxisMinimum(0);
+        mAxisLeft.setLabelCount(5, false);
+        //文字颜色
+        mAxisLeft.setTextColor(R.color.gray1);
+        xAxis.setTextColor(R.color.gray1);
+
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);//设置X轴在底部
+        if (type == DAY) {
+            Log.e("type", "DAY");
+            xAxis.setAxisMaximum(15);
+            xAxis.setLabelCount(5);
+            formatter = new IAxisValueFormatter() {
+                String[] day = new String[]{"07:00", "08:00", "09:00", "10:00", "11:00"
+                        , "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"};
+
+                @Override
+                public String getFormattedValue(float value, AxisBase axis) {
+                    return day[(int) value % day.length];
+                }
+
+
+            };
+        } else if (type == WEEK) {
+            Log.e("type", "WEEK");
+            xAxis.setAxisMaximum(6);
+            formatter = new IAxisValueFormatter() {
+                String[] day = new String[]{"SUN", "MON", "TUES", "WED", "THURS", "FRI", "SAT"};
+
+                @Override
+                public String getFormattedValue(float value, AxisBase axis) {
+                    return day[(int) value % day.length];
+                }
+
+
+            };
+        } else if (type == MONTH) {
+            Log.e("type", "MONTH");
+            MonthNext();
+        }
+
+
+        xAxis.setValueFormatter(formatter);
+    }
+
+    private void MonthNext() {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, 0);
+        final List<String> mon = new ArrayList<>();
+
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH) + 1;
+        int day = DateUtil.getDaysOfMonth(year, month);
+        for (int x = 1; x <= day; x++) {
+            if (x < 10) {
+                mon.add("0" + x + "号");
+            } else {
+                mon.add(x + "号");
+            }
+        }
+        IAxisValueFormatter formatter = new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                return mon.get((int) value % mon.size());
+            }
+
+
+        };
+        mChart.getXAxis().setValueFormatter(formatter);
     }
 }

@@ -14,7 +14,6 @@ public class StatisticsActivity extends BaseActivity implements RadioGroup.OnChe
 
     @BindView(R.id.statistics_rg)
     RadioGroup statisticsRg;
-
     private DayFragment dayFragment; //今日数据
     private WeekFragment weekFragment; //本周数据
     private MonthFragment monthFragment;//本月数据

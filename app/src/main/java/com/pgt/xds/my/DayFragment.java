@@ -59,6 +59,7 @@ public class DayFragment extends BaseFragment implements OnChartValueSelectedLis
         Description description = new Description();
         description.setText("");
         mChart.setDescription(description);
+
         //设置透明度
         // mChart.setAlpha(0.8f);
         //设置是否可以触摸，如为false，则不能拖动，缩放等
@@ -71,7 +72,8 @@ public class DayFragment extends BaseFragment implements OnChartValueSelectedLis
         //设置是否能扩大扩小
         mChart.setPinchZoom(false);
         //设置四个边的间距
-        // mChart.setViewPortOffsets(10, 0, 0, 10);
+        mChart.setExtraOffsets(0, 30, 10, 0);
+       // mChart.set
         //隐藏Y轴
         mChart.getAxisRight().setEnabled(true);
         mChart.getAxisRight().setDrawGridLines(false);
@@ -151,7 +153,7 @@ public class DayFragment extends BaseFragment implements OnChartValueSelectedLis
         values1.add(new Entry(8, 16));
         values1.add(new Entry(9, 2));
         values1.add(new Entry(10, 17));
-        values1.add(new Entry(11, 5));
+        values1.add(new Entry(11, 25));
         values1.add(new Entry(12, 11));
         values1.add(new Entry(13, 17));
         values1.add(new Entry(14, 22));

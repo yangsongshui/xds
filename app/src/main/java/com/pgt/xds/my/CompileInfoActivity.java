@@ -71,8 +71,6 @@ public class CompileInfoActivity extends BaseActivity implements View.OnFocusCha
     LinearLayout compileWeight;
     @BindView(R.id.compile_height)
     LinearLayout compileHeight;
-    private OptionsPickerView optionsPickerView;//地区选择
-    private TimePickerView timePickerView;
 
     @Override
     protected int getContentViewId() {
@@ -249,6 +247,7 @@ public class CompileInfoActivity extends BaseActivity implements View.OnFocusCha
             bitmap.recycle();
     }
 
+    //EditText获取焦点监听
     @Override
     public void onFocusChange(View v, boolean hasFocus) {
         if (hasFocus) {
@@ -260,17 +259,23 @@ public class CompileInfoActivity extends BaseActivity implements View.OnFocusCha
                 compileWeight.setVisibility(View.GONE);
 
             }
-            Log.e("----", "获取焦点");
         } else {
-            Log.e("----", "失去焦点");
             if (v.getId() == R.id.compile_height_et) {
                 compileHeight.setVisibility(View.VISIBLE);
                 compileHeightIv.setVisibility(View.INVISIBLE);
+                String height = compileHeightEt.getText().toString();
+                if (height.length() > 0)
+                    compileHeightTv.setText(height);
+                compileHeightEt.setText("");
 
             } else if (v.getId() == R.id.compile_weight_et) {
                 compileWeight.setVisibility(View.VISIBLE);
                 compileWeightIv.setVisibility(View.INVISIBLE);
+                String weight = compileWeightEt.getText().toString();
 
+                if (weight.length() > 0)
+                    compileWeightTv.setText(weight);
+                compileWeightEt.setText("");
             }
         }
     }

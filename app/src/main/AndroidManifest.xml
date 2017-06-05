@@ -77,7 +77,9 @@
         <activity android:name=".my.SetActivity" />
         <activity android:name=".my.SeekActivity" />
         <activity android:name=".my.HistoryActivity" />
-        <activity android:name=".my.StatisticsActivity"></activity>
+        <activity android:name=".my.StatisticsActivity" />
+        <activity android:name=".my.BicycleActivity" />
+        <activity android:name=".my.AddActivity"></activity>
     </application>
 
 </manifest>

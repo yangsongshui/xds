@@ -57,6 +57,7 @@ public class MyFragment extends BaseFragment {
                 startActivity(new Intent(getActivity(), StatisticsActivity.class));
                 break;
             case R.id.my_bicycle_bt://我的单车
+                startActivity(new Intent(getActivity(), BicycleActivity.class));
                 break;
             case R.id.my_wallet_bt://我的钱包
                 break;

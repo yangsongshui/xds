@@ -160,6 +160,13 @@
     <string name="statistics_good">最佳成绩</string>
     <string name="statistics_times">times</string>
     <string name="statistics_cal">Cal</string>
+    <!--我的单车-->
+    <string name="bicycle_pic">添加单车图片</string>
+    <string name="bicycle_name">品牌</string>
+    <string name="bicycle_type">型号</string>
+    <string name="bicycle_time">购买年份</string>
+    <string name="bicycle_standard">车轮规格</string>
+    <string name="bicycle_small">寸</string>
     <!--设置-->
     <string name="set">设置</string>
     <string name="set_msg">基本设置</string>

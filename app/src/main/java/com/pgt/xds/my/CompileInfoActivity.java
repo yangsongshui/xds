@@ -1,20 +1,17 @@
 package com.pgt.xds.my;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v7.app.AlertDialog;
-import android.text.method.DigitsKeyListener;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +31,7 @@ import static com.pgt.xds.utils.PicUtil.hasSdcard;
 /**
  * 编辑个人信息界面
  */
-public class CompileInfoActivity extends BaseActivity {
+public class CompileInfoActivity extends BaseActivity implements View.OnFocusChangeListener {
 
     private static final int RESULT = 1;
     private static final int PHOTO_REQUEST_CUT = 2;
@@ -62,6 +59,18 @@ public class CompileInfoActivity extends BaseActivity {
     //自定义的弹出框类
     CompilePopupWindow menuWindow;
     Bitmap bitmap;
+    @BindView(R.id.compile_height_et)
+    EditText compileHeightEt;
+    @BindView(R.id.compile_weight_et)
+    EditText compileWeightEt;
+    @BindView(R.id.compile_height_iv)
+    ImageView compileHeightIv;
+    @BindView(R.id.compile_weight_iv)
+    ImageView compileWeightIv;
+    @BindView(R.id.compile_weight)
+    LinearLayout compileWeight;
+    @BindView(R.id.compile_height)
+    LinearLayout compileHeight;
     private OptionsPickerView optionsPickerView;//地区选择
     private TimePickerView timePickerView;
 
@@ -83,7 +92,8 @@ public class CompileInfoActivity extends BaseActivity {
 
     @Override
     protected void initListener() {
-
+        compileHeightEt.setOnFocusChangeListener(this);
+        compileWeightEt.setOnFocusChangeListener(this);
     }
 
     @Override
@@ -93,7 +103,7 @@ public class CompileInfoActivity extends BaseActivity {
 
 
     @OnClick({R.id.left_layout, R.id.compile_pic_ll, R.id.compile_name_ll, R.id.compile_phone_ll, R.id.compile_sex_ll,
-            R.id.compile_height_ll, R.id.compile_weight_ll, R.id.compile_age_ll, R.id.compile_address_ll})
+            R.id.compile_weight_iv, R.id.compile_height_iv, R.id.compile_age_ll, R.id.compile_address_ll})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.left_layout:
@@ -112,11 +122,11 @@ public class CompileInfoActivity extends BaseActivity {
             case R.id.compile_sex_ll:
                 startActivity(new Intent(this, CompileSexActivity.class));
                 break;
-            case R.id.compile_height_ll:
-                showDialog(compileHeightTv);
+            case R.id.compile_height_iv:
+                compileHeightEt.setText("");
                 break;
-            case R.id.compile_weight_ll:
-                showDialog(compileWeightTv);
+            case R.id.compile_weight_iv:
+                compileWeightEt.setText("");
                 break;
             case R.id.compile_age_ll:
                 startActivity(new Intent(this, CompileAgeActivity.class));
@@ -142,7 +152,6 @@ public class CompileInfoActivity extends BaseActivity {
                     openGamera();
 
                     break;
-
                 default:
                     break;
             }
@@ -240,35 +249,42 @@ public class CompileInfoActivity extends BaseActivity {
             bitmap.recycle();
     }
 
-    private void showDialog(final TextView textView) {
-        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        DigitsKeyListener numericOnlyListener = new DigitsKeyListener(false, true);
-        final EditText editText = new EditText(this);
-        if (textView.getId() == R.id.compile_weight_tv || textView.getId() == R.id.compile_height_tv) {
-            editText.setKeyListener(numericOnlyListener);
-        }
-        editText.setMaxLines(1);
-        alertDialog.setTitle("请输入").setView(editText).setPositiveButton("确定", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                if (editText.getText().toString().equals("") || editText.getText().toString().length() == 0)
-                    return;
-                textView.setText(editText.getText().toString());
+    @Override
+    public void onFocusChange(View v, boolean hasFocus) {
+        if (hasFocus) {
+            if (v.getId() == R.id.compile_height_et) {
+                compileHeightIv.setVisibility(View.VISIBLE);
+                compileHeight.setVisibility(View.GONE);
+            } else if (v.getId() == R.id.compile_weight_et) {
+                compileWeightIv.setVisibility(View.VISIBLE);
+                compileWeight.setVisibility(View.GONE);
 
             }
-        }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
+            Log.e("----", "获取焦点");
+        } else {
+            Log.e("----", "失去焦点");
+            if (v.getId() == R.id.compile_height_et) {
+                compileHeight.setVisibility(View.VISIBLE);
+                compileHeightIv.setVisibility(View.INVISIBLE);
+
+            } else if (v.getId() == R.id.compile_weight_et) {
+                compileWeight.setVisibility(View.VISIBLE);
+                compileWeightIv.setVisibility(View.INVISIBLE);
+
             }
-        });
-        AlertDialog tempDialog = alertDialog.create();
-        tempDialog.setOnShowListener(new DialogInterface.OnShowListener() {
-            public void onShow(DialogInterface dialog) {
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);
-            }
-        });
-        tempDialog.show();
+        }
     }
+
+    @Override
+    public View[] filterViewByIds() {
+        View[] views = {compileHeightIv, compileWeightIv};
+        return views;
+    }
+
+    @Override
+    public int[] hideSoftByEditViewIds() {
+        int[] ids = {R.id.compile_height_et, R.id.compile_weight_et};
+        return ids;
+    }
+
 }

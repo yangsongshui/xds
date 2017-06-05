@@ -1,13 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
+    android:layout_marginBottom="5dp"
     android:orientation="horizontal">
 
     <ImageView
+        android:id="@+id/bicycle_pic"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_margin="10dp"
         android:src="@drawable/pic" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bicycle_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="喜德盛"
+                android:textColor="@color/rangoon_green"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/bicycle_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="XDS123456"
+                android:textColor="@color/rangoon_green"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bicycle_mileage"
+                android:textColor="@color/armadillo"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/bicycle_mileage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="56"
+                android:textColor="@color/armadillo"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bicycle_run"
+                android:textColor="@color/armadillo"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <CheckBox
+        android:id="@+id/bicycle_check"
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:button="@drawable/bicycle_check"
+        android:layout_height="match_parent" />
 </LinearLayout>

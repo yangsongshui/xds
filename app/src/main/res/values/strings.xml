@@ -167,6 +167,12 @@
     <string name="bicycle_time">购买年份</string>
     <string name="bicycle_standard">车轮规格</string>
     <string name="bicycle_small">寸</string>
+    <string name="bicycle_mileage">累计里程:</string>
+    <string name="bicycle_run">Km</string>
+    <!--历史记录-->
+    <string name="history_speed">平均速度:</string>
+    <string name="history_cadence">平均踏频:</string>
+    <string name="history_cal">卡路里:</string>
     <!--设置-->
     <string name="set">设置</string>
     <string name="set_msg">基本设置</string>

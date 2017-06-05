@@ -221,7 +221,7 @@ public class AddActivity extends BaseActivity implements View.OnFocusChangeListe
         intent.putExtra("crop", "true");
         intent.putExtra("aspectX", 1);
         intent.putExtra("aspectY", 1);
-        intent.putExtra("outputX", 250);
+        intent.putExtra("outputX", 450);
         intent.putExtra("outputY", 250);
         intent.putExtra("return-data", true);
         startActivityForResult(intent, PHOTO_REQUEST_CUT);

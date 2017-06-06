@@ -36,8 +36,17 @@
             android:text="@string/my_history" />
     </RelativeLayout>
 
-    <ExpandableListView
+    <TextView
+        android:id="@+id/history_month_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/club_btn_bg"
+        android:text="2月份"
+        android:textColor="@color/rangoon_green" />
+
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/history_rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 </LinearLayout>

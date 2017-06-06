@@ -1,88 +1,68 @@
 package com.pgt.xds.my.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.pgt.xds.R;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by omni20170501 on 2017/6/5.
  */
 
-public class HistoryAdapter extends BaseExpandableListAdapter {
-
+public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
+    private List<String> data;
     private Context context;
-    private Map<String, List<String>> data = new HashMap<>();
-    //  获得父项的数量
-    @Override
-    public int getGroupCount() {
-        return 0;
-    }
 
-    //  获得某个父项的子项数目
-    @Override
-    public int getChildrenCount(int groupPosition) {
-        return 0;
-    }
-
-    //  获得某个父项
-    @Override
-    public Object getGroup(int groupPosition) {
-        return null;
-    }
-
-    //  获得某个父项的某个子项
-    @Override
-    public Object getChild(int groupPosition, int childPosition) {
-        return null;
-    }
-
-    //  获得某个父项的id
-    @Override
-    public long getGroupId(int groupPosition) {
-        return groupPosition;
-    }
-
-    //  获得某个父项的某个子项的id
-    @Override
-    public long getChildId(int groupPosition, int childPosition) {
-        return childPosition;
+    public HistoryAdapter(List<String> data, Context context) {
+        this.data = data;
+        this.context = context;
     }
 
     @Override
-    public boolean hasStableIds() {
-        return false;
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.history_child, parent, false);
+        return new HistoryAdapter.ViewHolder(view);
     }
 
-    //  获得父项显示的view
     @Override
-    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
-        if (convertView == null) {
-           // LayoutInflater inflater = (LayoutInflater) HistoryActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-           // convertView = inflater.inflate(R.layout.history_group, null);
+    public void onBindViewHolder(ViewHolder holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return data.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        private ImageView child_pic;
+        private TextView child_time, child_linear, child_cadence,child_mileage,child_cal;
+
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            child_pic = (ImageView) itemView.findViewById(R.id.child_pic);
+            child_time = (TextView) itemView.findViewById(R.id.child_time);
+            child_linear = (TextView) itemView.findViewById(R.id.child_linear);
+            child_cadence = (TextView) itemView.findViewById(R.id.child_cadence);
+            child_mileage = (TextView) itemView.findViewById(R.id.child_mileage);
+            child_cal = (TextView) itemView.findViewById(R.id.child_cal);
+
+
         }
-        convertView.setTag(R.layout.history_group, parent);
-        convertView.setTag(R.layout.history_child, -1);
-
-
-        return convertView;
     }
 
-    //  获得子项显示的view
-    @Override
-    public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-        return null;
+    public void setItems(List<String> data) {
+        this.data = data;
+        this.notifyDataSetChanged();
     }
 
-    //  子项是否可选中，如果需要设置子项的点击事件，需要返回true
-    @Override
-    public boolean isChildSelectable(int groupPosition, int childPosition) {
-        return true;
-    }
 }

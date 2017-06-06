@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
@@ -15,8 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bigkoo.pickerview.OptionsPickerView;
-import com.bigkoo.pickerview.TimePickerView;
 import com.pgt.xds.BaseActivity;
 import com.pgt.xds.R;
 import com.pgt.xds.view.CompilePopupWindow;
@@ -247,7 +244,7 @@ public class CompileInfoActivity extends BaseActivity implements View.OnFocusCha
             bitmap.recycle();
     }
 
-    //EditText获取焦点监听
+    //判断EditText获取焦点监听
     @Override
     public void onFocusChange(View v, boolean hasFocus) {
         if (hasFocus) {

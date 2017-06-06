@@ -13,7 +13,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 public class SetTroopsActivity extends BaseActivity implements TextWatcher {
-    private static final int RESULT = 1;
+    private static final int RESULT = 2;
     @BindView(R.id.set_name_ed)
     EditText setNameEd;
     @BindView(R.id.troops_introduce_ed)

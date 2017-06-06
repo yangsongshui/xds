@@ -13,6 +13,9 @@ import com.pgt.xds.R;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+/**
+ * 京东商城网页
+ */
 public class JDActivity extends BaseActivity {
 
 

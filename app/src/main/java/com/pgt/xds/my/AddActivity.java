@@ -76,7 +76,7 @@ public class AddActivity extends BaseActivity implements View.OnFocusChangeListe
                 bicycleTimeTv.setText(DateUtil.dateToString(date, DateUtil.LONG_DATE_FORMAT3));
 
             }
-        }).setType(TimePickerView.Type.YEAR_MONTH_DAY)
+        }).setType(new boolean[]{true,true,true,false,false,false})
                 .build();
     }
 

@@ -1,6 +1,7 @@
 package com.pgt.xds.club;
 
 import android.content.Intent;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -8,6 +9,10 @@ import android.widget.TextView;
 
 import com.pgt.xds.BaseActivity;
 import com.pgt.xds.R;
+import com.pgt.xds.club.adapter.TroopsAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -34,6 +39,10 @@ public class TroopsActivity extends BaseActivity {
     @BindView(R.id.troops_rv)
     RecyclerView troopsRv;
 
+    TroopsAdapter adapter;
+
+    List<String> mList;
+
     @Override
     protected int getContentViewId() {
         return R.layout.activity_troops;
@@ -41,12 +50,21 @@ public class TroopsActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        troopsRv.setLayoutManager(layoutManager);
+        mList = new ArrayList<>();
+        adapter = new TroopsAdapter(mList, this);
+        troopsRv.setAdapter(adapter);
     }
 
     @Override
     protected void initData() {
-
+        mList.add("123");
+        mList.add("123");
+        mList.add("123");
+        mList.add("123");
+        adapter.setItems(mList);
     }
 
     @Override
@@ -63,6 +81,7 @@ public class TroopsActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.left_layout:
+                finish();
                 break;
             case R.id.right_layout:
                 startActivity(new Intent(this, NewTroopsActivity.class));
@@ -70,6 +89,7 @@ public class TroopsActivity extends BaseActivity {
             case R.id.club_search_ll:
                 break;
             case R.id.recommend_one_ll:
+                startActivity(new Intent(this,RecommendActivity.class));
                 break;
             case R.id.recommend_two_ll:
                 break;

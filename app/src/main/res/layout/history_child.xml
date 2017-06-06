@@ -13,6 +13,7 @@
         android:src="@drawable/pic" />
 
     <TextView
+        android:id="@+id/child_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -40,6 +41,7 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/child_linear"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -70,6 +72,7 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/child_cadence"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -106,6 +109,7 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/child_mileage"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -136,6 +140,7 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/child_cal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"

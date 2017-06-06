@@ -68,8 +68,10 @@
 
         <LinearLayout
             android:id="@+id/club_search_ll"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
             android:layout_marginBottom="5dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/troops_search_background"
@@ -216,6 +218,5 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/troops_rv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white" />
+        android:layout_height="wrap_content" />
 </LinearLayout>

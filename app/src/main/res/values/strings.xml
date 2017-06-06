@@ -78,8 +78,9 @@
     <string name="troops_add">新建</string>
     <string name="troops_recommend">推荐骑行队</string>
     <string name="troops_my">我的骑行队</string>
-    <string name="troops_id">ID</string>
-    <string name="troops_num">人数</string>
+    <string name="troops_id">ID:</string>
+    <string name="troops_num">人数:</string>
+    <string name="troops_people">人</string>
     <string name="troops_search">搜索骑行队名称/ID</string>
     <string name="troops_new">创建骑行队</string>
     <string name="troops_new_pic">添加骑行队封面</string>
@@ -89,6 +90,16 @@
     <string name="troops_introduce_hint">请输入简介</string>
     <string name="troops_introduce_entrance">进入骑行队</string>
     <string name="troops_introduce_invite">邀请好友加入</string>
+    <!--赛事-->
+    <string name="competition_countdown">倒计时:</string>
+    <string name="competition_num">报名人数:</string>
+    <string name="competition_time">时间:</string>
+    <string name="competition_address">地点:</string>
+    <string name="competition_hour">时</string>
+    <string name="competition_min">分</string>
+    <string name="competition_day">日</string>
+
+
     <!--discover-->
     <string name="discover_mall">官方商城</string>
     <string name="discover_mall_msg">更高,更远,更强，我们从未停止过</string>
@@ -100,6 +111,9 @@
     <string name="inquire_province">省份</string>
     <string name="inquire_city">城市</string>
     <string name="inquire_select">请选择</string>
+    <string name="inquire_phone">电话:</string>
+    <string name="inquire_address">地址:</string>
+
 
     <!--My-->
     <string name="compile_info">编辑个人简介</string>
@@ -142,6 +156,9 @@
     <string name="compile_day">天</string>
     <string name="compile_week">周</string>
     <string name="compile_month">月</string>
+    <string name="compile_year">年</string>
+    <string name="compile_am">上午</string>
+    <string name="compile_pm">下午</string>
     <string name="marker_mileage">里程:</string>
     <string name="marker_time">时间:</string>
     <string name="marker_min">min</string>
@@ -173,6 +190,7 @@
     <string name="history_speed">平均速度:</string>
     <string name="history_cadence">平均踏频:</string>
     <string name="history_cal">卡路里:</string>
+    <string name="history_month">月份</string>
     <!--设置-->
     <string name="set">设置</string>
     <string name="set_msg">基本设置</string>

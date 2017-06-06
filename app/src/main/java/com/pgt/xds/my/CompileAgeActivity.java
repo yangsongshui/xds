@@ -37,8 +37,7 @@ public class CompileAgeActivity extends BaseActivity {
                 int age = -(DateUtil.yearDiff(DateUtil.getCurrDate(DateUtil.LONG_DATE_FORMAT), getTime(date)) - 1);
                 myAge.setText(age + "");
             }
-        }).setType(TimePickerView.Type.YEAR_MONTH_DAY)
-                .build();
+        }).setType(new boolean[]{true,true,true,false,false,false}).build();
     }
 
     @Override

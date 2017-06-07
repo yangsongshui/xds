@@ -33,7 +33,7 @@ public class NavigationFragment extends BaseFragment implements RouteSearch.OnRo
     }
 
     private void initMap(View layout, Bundle savedInstanceState) {
-        mapView = (MapView) layout.findViewById(R.id.map);
+        mapView = (MapView) layout.findViewById(R.id.myMap);
         mapView.onCreate(savedInstanceState);// 此方法须覆写，虚拟机需要在很多情况下保存地图绘制的当前状态。
         //初始化地图控制器对象
         if (aMap == null) {

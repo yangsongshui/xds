@@ -58,7 +58,7 @@
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="aeb466b5021bd1601d5c6dce4b9cfdfe" />
+            android:value="68274d1d99c6f14e3de295865bc7315e" />
 
         <activity android:name=".club.CompetitionActivity" />
         <activity android:name=".club.TroopsActivity" />
@@ -71,16 +71,18 @@
         <activity android:name=".my.CompileInfoActivity" />
         <activity android:name=".my.CompileNameActivity" />
         <activity android:name=".my.CompilePhoneActivity" />
-        <activity android:name=".my.CompileSexActivity" />
         <activity android:name=".my.CompileAddressActivity" />
         <activity android:name=".my.CompileAgeActivity" />
         <activity android:name=".my.SetActivity" />
         <activity android:name=".my.SeekActivity" />
         <activity android:name=".my.HistoryActivity" />
         <activity android:name=".my.StatisticsActivity" />
+        <activity android:name=".my.CompileSexActivity" />
         <activity android:name=".my.BicycleActivity" />
         <activity android:name=".my.AddActivity" />
-        <activity android:name=".club.RecommendActivity"></activity>
+        <activity android:name=".club.RecommendActivity" />
+        <activity android:name=".club.UpdateActivity" />
+        <activity android:name=".club.MemberActivity"></activity>
     </application>
 
 </manifest>

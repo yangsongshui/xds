@@ -7,9 +7,11 @@ import android.widget.TextView;
 
 import com.bigkoo.pickerview.TimePickerView;
 import com.pgt.xds.BaseActivity;
+import com.pgt.xds.OnItemCheckListener;
 import com.pgt.xds.R;
 import com.pgt.xds.my.adapter.HistoryAdapter;
 import com.pgt.xds.utils.DateUtil;
+import com.pgt.xds.utils.Toastor;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,7 +20,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class HistoryActivity extends BaseActivity {
+public class HistoryActivity extends BaseActivity implements OnItemCheckListener {
 
     @BindView(R.id.history_rv)
     RecyclerView historyRv;
@@ -27,7 +29,7 @@ public class HistoryActivity extends BaseActivity {
     HistoryAdapter adapter;
     List<String> mList;
     private TimePickerView timePickerView;
-
+    Toastor toastor;
     @Override
     protected int getContentViewId() {
         return R.layout.activity_history;
@@ -35,6 +37,7 @@ public class HistoryActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        toastor=new Toastor(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         historyRv.setLayoutManager(layoutManager);
@@ -63,7 +66,7 @@ public class HistoryActivity extends BaseActivity {
 
     @Override
     protected void initListener() {
-
+        adapter.setOnItemCheckListener(this);
     }
 
     @Override
@@ -82,5 +85,10 @@ public class HistoryActivity extends BaseActivity {
                 timePickerView.show();
                 break;
         }
+    }
+
+    @Override
+    public void OnItemCheck(RecyclerView.ViewHolder viewHolder, int position) {
+        toastor.showSingletonToast("点击了" + position);
     }
 }

@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.pgt.xds.OnItemCheckListener;
 import com.pgt.xds.R;
 
 import java.util.List;
@@ -19,6 +21,7 @@ import java.util.List;
 public class TroopsAdapter extends RecyclerView.Adapter<TroopsAdapter.ViewHolder> {
     private List<String> data;
     private Context context;
+    private OnItemCheckListener onItemCheckListener;
 
     public TroopsAdapter(List<String> data, Context context) {
         this.data = data;
@@ -32,8 +35,14 @@ public class TroopsAdapter extends RecyclerView.Adapter<TroopsAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
+            holder.troops_item.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onItemCheckListener!=null)
+                        onItemCheckListener.OnItemCheck(holder,position);
+                }
+            });
     }
 
     @Override
@@ -45,7 +54,7 @@ public class TroopsAdapter extends RecyclerView.Adapter<TroopsAdapter.ViewHolder
 
         private ImageView troops_pic;
         private TextView troops_name, troops_lv, troops_id,troops_people,troops_introduce;
-
+        private LinearLayout troops_item;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -55,6 +64,7 @@ public class TroopsAdapter extends RecyclerView.Adapter<TroopsAdapter.ViewHolder
             troops_id = (TextView) itemView.findViewById(R.id.troops_id);
             troops_people = (TextView) itemView.findViewById(R.id.troops_people);
             troops_introduce = (TextView) itemView.findViewById(R.id.troops_introduce);
+            troops_item = (LinearLayout) itemView.findViewById(R.id.troops_item);
 
 
         }
@@ -63,5 +73,9 @@ public class TroopsAdapter extends RecyclerView.Adapter<TroopsAdapter.ViewHolder
     public void setItems(List<String> data) {
         this.data = data;
         this.notifyDataSetChanged();
+    }
+
+    public void setOnItemCheckListener(OnItemCheckListener onItemCheckListener) {
+        this.onItemCheckListener = onItemCheckListener;
     }
 }

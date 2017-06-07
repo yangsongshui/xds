@@ -1,7 +1,6 @@
 package com.pgt.xds.utils;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.pgt.xds.model.PickerViewData;
 import com.pgt.xds.model.ProvinceBean;
@@ -50,7 +49,7 @@ public class GetCity {
             }
             is.close();
             mJsonObj = new JSONArray(sb.toString());
-            Log.e("GetCity", mJsonObj.toString());
+           // Log.e("GetCity", mJsonObj.toString());
             parseJson();
         } catch (IOException e) {
             e.printStackTrace();
@@ -69,7 +68,7 @@ public class GetCity {
                 JSONObject provinceObject = mJsonObj.optJSONObject(i);
                 //  获取省份名称放入集合
                 String provinceName = provinceObject.getString("name");
-                Log.e("GetCity", provinceName);
+               // Log.e("GetCity", provinceName);
                 //  获取城市数组
                 JSONArray cityArray = provinceObject.optJSONArray("city");
                 cities = new ArrayList<>();//   声明存放城市的集合

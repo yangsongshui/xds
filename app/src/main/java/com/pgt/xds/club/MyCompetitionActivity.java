@@ -5,8 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.pgt.xds.BaseActivity;
+import com.pgt.xds.OnItemCheckListener;
 import com.pgt.xds.R;
 import com.pgt.xds.club.adapter.MyCompetitionAdapter;
+import com.pgt.xds.utils.Toastor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class MyCompetitionActivity extends BaseActivity {
+public class MyCompetitionActivity extends BaseActivity implements OnItemCheckListener {
 
 
     @BindView(R.id.my_competition_rv)
@@ -22,6 +24,7 @@ public class MyCompetitionActivity extends BaseActivity {
 
     MyCompetitionAdapter adapter;
     List<String> mList;
+    Toastor toastor;
 
     @Override
     protected int getContentViewId() {
@@ -30,9 +33,10 @@ public class MyCompetitionActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-            layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-            myCompetitionRv.setLayoutManager(layoutManager);
+        toastor = new Toastor(this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        myCompetitionRv.setLayoutManager(layoutManager);
     }
 
     @Override
@@ -42,6 +46,7 @@ public class MyCompetitionActivity extends BaseActivity {
         mList.add("13");
         mList.add("13");
         adapter = new MyCompetitionAdapter(mList, this);
+        adapter.setOnItemCheckListener(this);
         myCompetitionRv.setAdapter(adapter);
     }
 
@@ -59,5 +64,10 @@ public class MyCompetitionActivity extends BaseActivity {
     @OnClick(R.id.left_layout)
     public void onViewClicked() {
         finish();
+    }
+
+    @Override
+    public void OnItemCheck(RecyclerView.ViewHolder viewHolder, int position) {
+        toastor.showSingletonToast("点击了" + position);
     }
 }

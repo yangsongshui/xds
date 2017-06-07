@@ -7,9 +7,11 @@ import android.widget.TextView;
 
 import com.bigkoo.pickerview.OptionsPickerView;
 import com.pgt.xds.BaseActivity;
+import com.pgt.xds.OnItemCheckListener;
 import com.pgt.xds.R;
 import com.pgt.xds.discover.adapter.ShopAdapter;
 import com.pgt.xds.utils.GetCity;
+import com.pgt.xds.utils.Toastor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +22,7 @@ import butterknife.OnClick;
 /**
  * 门市查询界面
  */
-public class InquireActivity extends BaseActivity {
+public class InquireActivity extends BaseActivity implements OnItemCheckListener {
 
     @BindView(R.id.inquire_province)
     TextView inquireProvince;
@@ -31,7 +33,7 @@ public class InquireActivity extends BaseActivity {
     ShopAdapter adapter;
     GetCity getCity;
     List<String> mList;
-
+    Toastor toastor;
     private OptionsPickerView optionsPickerView;//地区选择
 
     @Override
@@ -47,7 +49,7 @@ public class InquireActivity extends BaseActivity {
         getCity = new GetCity(this);
         optionsPickerView = new OptionsPickerView.Builder(this, onOptionsSelectListener).build();
         optionsPickerView.setPicker(getCity.getOptions1Items(), getCity.getOptions2Items());//二级选择器
-
+        toastor = new Toastor(this);
     }
 
     @Override
@@ -59,7 +61,7 @@ public class InquireActivity extends BaseActivity {
 
     @Override
     protected void initListener() {
-
+        adapter.setOnItemCheckListener(this);
     }
 
     @Override
@@ -96,4 +98,9 @@ public class InquireActivity extends BaseActivity {
             adapter.setItems(mList);
         }
     };
+
+    @Override
+    public void OnItemCheck(RecyclerView.ViewHolder viewHolder, int position) {
+        toastor.showSingletonToast("点击了" + position);
+    }
 }

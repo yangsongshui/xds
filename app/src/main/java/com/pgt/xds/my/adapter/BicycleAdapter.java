@@ -7,8 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.pgt.xds.OnItemCheckListener;
 import com.pgt.xds.R;
 
 import java.util.List;
@@ -20,6 +22,7 @@ import java.util.List;
 public class BicycleAdapter extends RecyclerView.Adapter<BicycleAdapter.ViewHolder> {
     private List<String> data;
     private Context context;
+    private OnItemCheckListener onItemCheckListener;
 
     public BicycleAdapter(List<String> data, Context context) {
         this.data = data;
@@ -33,8 +36,15 @@ public class BicycleAdapter extends RecyclerView.Adapter<BicycleAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.bicycle_type.setText(data.get(position));
+        holder.bicycle_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemCheckListener != null)
+                    onItemCheckListener.OnItemCheck(holder, position);
+            }
+        });
     }
 
     @Override
@@ -47,6 +57,7 @@ public class BicycleAdapter extends RecyclerView.Adapter<BicycleAdapter.ViewHold
         private ImageView bicycle_pic;
         private TextView bicycle_mileage, bicycle_type, bicycle_name;
         private CheckBox bicycle_check;
+        private LinearLayout bicycle_item;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -55,6 +66,7 @@ public class BicycleAdapter extends RecyclerView.Adapter<BicycleAdapter.ViewHold
             bicycle_type = (TextView) itemView.findViewById(R.id.bicycle_type);
             bicycle_name = (TextView) itemView.findViewById(R.id.bicycle_name);
             bicycle_check = (CheckBox) itemView.findViewById(R.id.bicycle_check);
+            bicycle_item = (LinearLayout) itemView.findViewById(R.id.bicycle_item);
 
         }
     }
@@ -64,4 +76,7 @@ public class BicycleAdapter extends RecyclerView.Adapter<BicycleAdapter.ViewHold
         this.notifyDataSetChanged();
     }
 
+    public void setOnItemCheckListener(OnItemCheckListener onItemCheckListener) {
+        this.onItemCheckListener = onItemCheckListener;
+    }
 }

@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.pgt.xds.OnItemCheckListener;
 import com.pgt.xds.R;
 
 import java.util.List;
@@ -20,6 +22,8 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     private List<String> data;
     private Context context;
 
+
+    private OnItemCheckListener onItemCheckListener;
     public HistoryAdapter(List<String> data, Context context) {
         this.data = data;
         this.context = context;
@@ -32,8 +36,14 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
+    holder.history_item.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (onItemCheckListener!=null)
+                onItemCheckListener.OnItemCheck(holder,position);
+        }
+    });
     }
 
     @Override
@@ -45,7 +55,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
         private ImageView child_pic;
         private TextView child_time, child_linear, child_cadence,child_mileage,child_cal;
-
+        private LinearLayout history_item;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -55,6 +65,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
             child_cadence = (TextView) itemView.findViewById(R.id.child_cadence);
             child_mileage = (TextView) itemView.findViewById(R.id.child_mileage);
             child_cal = (TextView) itemView.findViewById(R.id.child_cal);
+            history_item = (LinearLayout) itemView.findViewById(R.id.history_item);
 
 
         }
@@ -64,5 +75,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         this.data = data;
         this.notifyDataSetChanged();
     }
-
+    public void setOnItemCheckListener(OnItemCheckListener onItemCheckListener) {
+        this.onItemCheckListener = onItemCheckListener;
+    }
 }

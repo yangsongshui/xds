@@ -18,7 +18,7 @@ import java.util.List;
  * Created by omni20170501 on 2017/6/6.
  */
 
-public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.ViewHolder> {
+public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder> {
     private List<String> data;
     private Context context;
 
@@ -28,20 +28,20 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
     private OnItemCheckListener onItemCheckListener;
 
-    public CompetitionAdapter(List<String> data, Context context) {
+    public MemberAdapter(List<String> data, Context context) {
         this.data = data;
         this.context = context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.competition_itme, parent, false);
-        return new CompetitionAdapter.ViewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.member_item, parent, false);
+        return new MemberAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        holder.competition_item.setOnClickListener(new View.OnClickListener() {
+        holder.member_ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (onItemCheckListener != null)
@@ -57,19 +57,17 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView competition_pic;
-        private TextView competition_name, competition_day, competition_hour, competition_min, competition_num;
-        private LinearLayout competition_item;
+        private ImageView member_pic;
+        private TextView member_name, member_age, competition_hour, member_lv;
+        private LinearLayout member_ll;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            competition_pic = (ImageView) itemView.findViewById(R.id.competition_pic);
-            competition_day = (TextView) itemView.findViewById(R.id.competition_day);
-            competition_hour = (TextView) itemView.findViewById(R.id.competition_hour);
-            competition_min = (TextView) itemView.findViewById(R.id.competition_min);
-            competition_name = (TextView) itemView.findViewById(R.id.competition_name);
-            competition_num = (TextView) itemView.findViewById(R.id.competition_num);
-            competition_item = (LinearLayout) itemView.findViewById(R.id.competition_item);
+            member_pic = (ImageView) itemView.findViewById(R.id.member_pic);
+            member_name = (TextView) itemView.findViewById(R.id.member_name);
+            member_age = (TextView) itemView.findViewById(R.id.member_age);
+            member_lv = (TextView) itemView.findViewById(R.id.member_lv);
+            member_ll = (LinearLayout) itemView.findViewById(R.id.member_ll);
 
         }
     }

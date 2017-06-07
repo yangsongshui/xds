@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.pgt.xds.OnItemCheckListener;
 import com.pgt.xds.R;
 
 import java.util.List;
@@ -19,6 +21,8 @@ import java.util.List;
 public class MyCompetitionAdapter extends RecyclerView.Adapter<MyCompetitionAdapter.ViewHolder> {
     private List<String> data;
     private Context context;
+    private OnItemCheckListener onItemCheckListener;
+
 
     public MyCompetitionAdapter(List<String> data, Context context) {
         this.data = data;
@@ -32,8 +36,14 @@ public class MyCompetitionAdapter extends RecyclerView.Adapter<MyCompetitionAdap
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
+        holder.my_competition_ll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemCheckListener != null)
+                    onItemCheckListener.OnItemCheck(holder, position);
+            }
+        });
     }
 
     @Override
@@ -44,8 +54,8 @@ public class MyCompetitionAdapter extends RecyclerView.Adapter<MyCompetitionAdap
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView compile_pic;
-        private TextView compile_name, compile_year, compile_month,compile_day,compile_am,compile_address;
-
+        private TextView compile_name, compile_year, compile_month, compile_day, compile_am, compile_address;
+        private LinearLayout my_competition_ll;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -56,6 +66,7 @@ public class MyCompetitionAdapter extends RecyclerView.Adapter<MyCompetitionAdap
             compile_day = (TextView) itemView.findViewById(R.id.compile_day);
             compile_am = (TextView) itemView.findViewById(R.id.compile_am);
             compile_address = (TextView) itemView.findViewById(R.id.compile_address);
+            my_competition_ll = (LinearLayout) itemView.findViewById(R.id.my_competition_ll);
 
 
         }
@@ -64,5 +75,9 @@ public class MyCompetitionAdapter extends RecyclerView.Adapter<MyCompetitionAdap
     public void setItems(List<String> data) {
         this.data = data;
         this.notifyDataSetChanged();
+    }
+
+    public void setOnItemCheckListener(OnItemCheckListener onItemCheckListener) {
+        this.onItemCheckListener = onItemCheckListener;
     }
 }

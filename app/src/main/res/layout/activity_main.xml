@@ -50,18 +50,19 @@
         android:id="@+id/main_content_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/main_title"
         android:orientation="vertical"
-        android:layout_marginBottom="55dp">
+        android:layout_below="@+id/main_title"
+        android:layout_marginBottom="55dp"
+    >
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:background="@color/main_botm_color">
+        android:background="@color/main_botm_color"
+        android:id="@+id/linearLayout2">
 
         <LinearLayout
             android:id="@+id/run_layout"
@@ -153,6 +154,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
 
 
 </RelativeLayout>

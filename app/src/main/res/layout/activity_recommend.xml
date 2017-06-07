@@ -1,148 +1,439 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.pgt.xds.club.RecommendActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/mercury">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="@drawable/recommend_bg"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/left_iv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/left_iv_bg"
-                android:contentDescription="@string/app_name"
-                android:padding="15dp"
-                android:src="@drawable/back" />
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"
-                android:src="@mipmap/app_icon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="骑行先锋队"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:background="@drawable/recommend_bg"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/troops_id"
-                    android:textColor="@color/gray2"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/troops_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1233456"
-                    android:textColor="@color/gray2"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/troops_num"
-                    android:textColor="@color/gray2"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/troops_people"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1233"
-                    android:textColor="@color/gray2"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/troops_people"
-                    android:textColor="@color/gray2"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/troops_lv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:background="@drawable/troops_lv"
-                    android:paddingBottom="3dp"
-                    android:paddingEnd="10dp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="3dp"
-                    android:text="LV1"
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/inquire_address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginStart="10dp"
-                    android:text="广东深圳市宝安"
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
-                android:orientation="vertical"
-                android:paddingBottom="20dp">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/white" />
+                    android:id="@+id/recommend_pic"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dp"
+                    android:src="@mipmap/app_icon" />
 
                 <TextView
+                    android:id="@+id/recommend_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="骑行先锋队"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/troops_id"
+                        android:textColor="@color/gray2"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/recommend_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1233456"
+                        android:textColor="@color/gray2"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/troops_num"
+                        android:textColor="@color/gray2"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/recommend_people"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1233"
+                        android:textColor="@color/gray2"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/troops_people"
+                        android:textColor="@color/gray2"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍"
-                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/recommend_lv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/troops_lv"
+                        android:paddingBottom="3dp"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="3dp"
+                        android:text="LV1"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/recommend_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="广东深圳市宝安"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍骑行队介绍"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/troops_photo_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/club_btn_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:text="@string/troops_photo"
+                    android:textColor="@color/armadillo"
                     android:textSize="12sp" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="36"
+                    android:textColor="@color/gray_chateau"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/access" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/recommend_photo1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/club_btn_bg"
+                        android:src="@drawable/jd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/recommend_photo2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/club_btn_bg"
+                        android:src="@drawable/jd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/recommend_photo3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/club_btn_bg"
+                        android:src="@drawable/jd" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/troops_top_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/club_btn_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:text="@string/troops_top"
+                    android:textColor="@color/armadillo"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/troops_examine"
+                    android:textColor="@color/gray_chateau"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/access" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/one_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/troops_top"
+                    android:gravity="center"
+                    android:text="@string/troops_one"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/one_pic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/jd" />
+
+                <TextView
+                    android:id="@+id/one_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:text="骑行队员"
+                    android:textColor="@color/rangoon_green" />
+
+                <TextView
+                    android:id="@+id/one_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25.83"
+                    android:textColor="@color/gray1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/troops_kilometre"
+                    android:textColor="@color/gray1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/two_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/troops_top"
+                    android:gravity="center"
+                    android:text="@string/troops_two"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/two_pic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/jd" />
+
+                <TextView
+                    android:id="@+id/two_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:text="骑行队员"
+                    android:textColor="@color/rangoon_green" />
+
+                <TextView
+                    android:id="@+id/two_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25.83"
+                    android:textColor="@color/gray1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/troops_kilometre"
+                    android:textColor="@color/gray1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/three_ll"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/troops_top"
+                    android:gravity="center"
+                    android:text="@string/troops_three"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/three_pic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/jd" />
+
+                <TextView
+                    android:id="@+id/three_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:text="骑行队员"
+                    android:textColor="@color/rangoon_green" />
+
+                <TextView
+                    android:id="@+id/three_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25.83"
+                    android:textColor="@color/gray1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/troops_kilometre"
+                    android:textColor="@color/gray1" />
             </LinearLayout>
         </LinearLayout>
 
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/left_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/left_iv_bg"
+        android:contentDescription="@string/app_name"
+        android:padding="15dp"
+        android:src="@drawable/back" />
+    <ImageView
+        android:id="@+id/right_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/left_iv_bg"
+        android:contentDescription="@string/app_name"
+        android:padding="15dp"
+        android:src="@drawable/set" />
+    <TextView
+        android:id="@+id/recommend_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/join_btn_bg"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/troops_join"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</RelativeLayout>
 

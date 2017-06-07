@@ -70,11 +70,12 @@
 
     <!--club-->
     <string name="club_competition">赛事</string>
-
     <string name="club_competition_msg">带你亲临赛事现场</string>
+
     <string name="riding_troops">骑行队</string>
     <string name="riding_troops_msg">加入骑行队</string>
     <string name="my_competition">我的赛事</string>
+    <!--骑行队-->
     <string name="troops_add">新建</string>
     <string name="troops_recommend">推荐骑行队</string>
     <string name="troops_my">我的骑行队</string>
@@ -90,6 +91,23 @@
     <string name="troops_introduce_hint">请输入简介</string>
     <string name="troops_introduce_entrance">进入骑行队</string>
     <string name="troops_introduce_invite">邀请好友加入</string>
+    <string name="troops_photo">相册</string>
+    <string name="troops_top">骑行排行榜</string>
+    <string name="troops_examine">查看全部排名</string>
+    <string name="troops_one">1</string>
+    <string name="troops_two">2</string>
+    <string name="troops_three">3</string>
+    <string name="troops_kilometre">公里</string>
+    <string name="troops_join">申请加入</string>
+    <string name="troops_join2">进入聊天</string>
+    <!--队设置-->
+    <string name="team_set">队设置</string>
+    <string name="team_entrance">邀请好友加入本队</string>
+    <string name="team_news">队消息提醒</string>
+    <string name="team_out">退出骑行队</string>
+    <string name="team_member">队成员</string>
+    <string name="team_search">搜索</string>
+    <string name="team_captain">队长</string>
     <!--赛事-->
     <string name="competition_countdown">倒计时:</string>
     <string name="competition_num">报名人数:</string>

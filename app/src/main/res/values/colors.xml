@@ -14,6 +14,7 @@
     <color name="white">#ffffff</color>
     <!-- 黑色 -->
     <color name="black">#000000</color>
+    <color name="black2">#85000000</color>
     <color name="input_color">#F0F0F0</color>
     <color name="forget_password_color">#E60515</color>
     <color name="forget_password_color_pressed">#7D040D</color>
@@ -38,6 +39,7 @@
     <color name="dull_red">#D72E26</color>
     <color name="gray2">#CCCCCC</color>
     <color name="yellow">#FFCC00</color>
+    <color name="green">#1BCC34</color>
 
 </resources>
 

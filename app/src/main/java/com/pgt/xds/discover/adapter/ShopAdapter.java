@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.pgt.xds.OnItemCheckListener;
 import com.pgt.xds.R;
 
 import java.util.List;
@@ -20,6 +22,9 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
     private List<String> data;
     private Context context;
 
+
+    private OnItemCheckListener onItemCheckListener;
+
     public ShopAdapter(List<String> data, Context context) {
         this.data = data;
         this.context = context;
@@ -27,13 +32,19 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.competition_itme, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.shop_item, parent, false);
         return new ShopAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
+        holder.shop_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemCheckListener != null)
+                    onItemCheckListener.OnItemCheck(holder, position);
+            }
+        });
     }
 
     @Override
@@ -45,7 +56,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
 
         private ImageView inquire_pic;
         private TextView inquire_name, inquire_phone, inquire_address;
-
+        private LinearLayout shop_item;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -53,6 +64,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
             inquire_name = (TextView) itemView.findViewById(R.id.inquire_name);
             inquire_phone = (TextView) itemView.findViewById(R.id.inquire_phone);
             inquire_address = (TextView) itemView.findViewById(R.id.inquire_address);
+            shop_item = (LinearLayout) itemView.findViewById(R.id.shop_item);
 
 
         }
@@ -61,5 +73,9 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
     public void setItems(List<String> data) {
         this.data = data;
         this.notifyDataSetChanged();
+    }
+
+    public void setOnItemCheckListener(OnItemCheckListener onItemCheckListener) {
+        this.onItemCheckListener = onItemCheckListener;
     }
 }

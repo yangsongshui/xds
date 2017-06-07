@@ -8,8 +8,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.pgt.xds.BaseActivity;
+import com.pgt.xds.OnItemCheckListener;
 import com.pgt.xds.R;
 import com.pgt.xds.club.adapter.TroopsAdapter;
+import com.pgt.xds.utils.Toastor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +19,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class TroopsActivity extends BaseActivity {
+public class TroopsActivity extends BaseActivity implements OnItemCheckListener {
 
 
     @BindView(R.id.recommend_one_iv)
@@ -40,7 +42,7 @@ public class TroopsActivity extends BaseActivity {
     RecyclerView troopsRv;
 
     TroopsAdapter adapter;
-
+    Toastor toastor;
     List<String> mList;
 
     @Override
@@ -56,6 +58,7 @@ public class TroopsActivity extends BaseActivity {
         mList = new ArrayList<>();
         adapter = new TroopsAdapter(mList, this);
         troopsRv.setAdapter(adapter);
+        toastor = new Toastor(this);
     }
 
     @Override
@@ -69,7 +72,7 @@ public class TroopsActivity extends BaseActivity {
 
     @Override
     protected void initListener() {
-
+        adapter.setOnItemCheckListener(this);
     }
 
     @Override
@@ -88,15 +91,14 @@ public class TroopsActivity extends BaseActivity {
                 break;
             case R.id.club_search_ll:
                 break;
-            case R.id.recommend_one_ll:
-                startActivity(new Intent(this,RecommendActivity.class));
-                break;
-            case R.id.recommend_two_ll:
-                break;
-            case R.id.recommend_three_ll:
-                break;
-            case R.id.recommend_four_ll:
+            default:
+                startActivity(new Intent(this,RecommendActivity.class).putExtra("type",1));
                 break;
         }
+    }
+
+    @Override
+    public void OnItemCheck(RecyclerView.ViewHolder viewHolder, int position) {
+        startActivity(new Intent(this,RecommendActivity.class).putExtra("type",0));
     }
 }

@@ -6,8 +6,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.pgt.xds.BaseActivity;
+import com.pgt.xds.OnItemCheckListener;
 import com.pgt.xds.R;
 import com.pgt.xds.club.adapter.CompetitionAdapter;
+import com.pgt.xds.utils.Toastor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,13 +17,14 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class CompetitionActivity extends BaseActivity {
+public class CompetitionActivity extends BaseActivity implements OnItemCheckListener {
 
     @BindView(R.id.competition_rv)
     RecyclerView competitionRv;
 
     CompetitionAdapter adapter;
     List<String> mList;
+    Toastor toastor;
 
     @Override
     protected int getContentViewId() {
@@ -33,6 +36,7 @@ public class CompetitionActivity extends BaseActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         competitionRv.setLayoutManager(layoutManager);
+        toastor = new Toastor(this);
     }
 
     @Override
@@ -42,6 +46,7 @@ public class CompetitionActivity extends BaseActivity {
         mList.add("123");
         mList.add("123");
         adapter = new CompetitionAdapter(mList, this);
+        adapter.setOnItemCheckListener(this);
         competitionRv.setAdapter(adapter);
     }
 
@@ -67,4 +72,8 @@ public class CompetitionActivity extends BaseActivity {
         }
     }
 
+    @Override
+    public void OnItemCheck(RecyclerView.ViewHolder viewHolder, int position) {
+        toastor.showSingletonToast("点击了" + position);
+    }
 }

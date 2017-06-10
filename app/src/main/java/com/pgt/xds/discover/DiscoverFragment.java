@@ -30,7 +30,7 @@ public class DiscoverFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.discover_inquire:
-                startActivity(new Intent(getActivity(), InquireActivity.class));
+                startActivity(new Intent(getActivity(), OfflineStoreActivity.class));
                 break;
             case R.id.discover_jd:
                 startActivity(new Intent(getActivity(), JDActivity.class));

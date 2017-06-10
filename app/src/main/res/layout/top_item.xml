@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_item"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/top_num"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/troops_top"
+        android:gravity="center"
+        android:text="@string/troops_one"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/top_pic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/jd" />
+
+    <TextView
+        android:id="@+id/top_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_weight="1"
+        android:text="骑行队员"
+        android:textColor="@color/rangoon_green" />
+
+    <TextView
+        android:id="@+id/top_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25.83"
+        android:textColor="@color/gray1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="@string/troops_kilometre"
+        android:textColor="@color/gray1" />
+</LinearLayout>

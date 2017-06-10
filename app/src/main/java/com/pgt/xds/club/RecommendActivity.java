@@ -12,6 +12,9 @@ import com.pgt.xds.R;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+/**
+ * 队伍群资料界面
+ **/
 public class RecommendActivity extends BaseActivity {
 
     @BindView(R.id.recommend_pic)
@@ -102,16 +105,23 @@ public class RecommendActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.troops_photo_ll://查看群相册
+                startActivity(new Intent(this, PhotoActivity.class));
                 break;
             case R.id.troops_top_ll://查看排行榜
+                startActivity(new Intent(this, TopActivity.class));
                 break;
             case R.id.left_iv:
                 finish();
                 break;
-            case R.id.recommend_join://申请加入
+            case R.id.recommend_join:
+                if (type == 1) {
+                    //申请加入
+                } else if (type == 0) {
+                    //进入聊天
+                }
                 break;
             case R.id.right_iv://设置
-                startActivity(new Intent(this,UpdateActivity.class));
+                startActivity(new Intent(this, UpdateActivity.class));
                 break;
         }
     }

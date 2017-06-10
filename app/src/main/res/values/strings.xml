@@ -131,6 +131,8 @@
     <string name="inquire_select">请选择</string>
     <string name="inquire_phone">电话:</string>
     <string name="inquire_address">地址:</string>
+    <string name="inquire_offline">线下门店</string>
+    <string name="inquire_list">列表显示</string>
 
 
     <!--My-->

@@ -129,6 +129,7 @@
                     android:textSize="12sp" />
 
                 <TextView
+
                     android:id="@+id/center_instrument_current_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -224,6 +225,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/run_linear_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -267,6 +269,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/run_mileage_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -308,6 +311,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/run_time_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="00:00:00"
@@ -352,10 +356,10 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/run_cadence_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
-
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
@@ -377,54 +381,16 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/run_calorie"
-                android:layout_marginTop="5dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-                <TextView
-                    style="@style/RunMenuText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/calorie" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/run_calorie"
-                style="@style/RunMenuTextImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/kcal"
-                android:text="@string/run_calorie" />
-
-
-        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:visibility="invisible"
             android:gravity="center"
             android:orientation="vertical">
 
-            <LinearLayout
+   <!--         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/run_heart"
@@ -452,7 +418,48 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/heart"
-                android:text="@string/run_heart" />
+                android:text="@string/run_heart" />-->
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/run_calorie"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/run_calorie_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    style="@style/RunMenuText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calorie" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/run_calorie"
+                style="@style/RunMenuTextImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/kcal"
+                android:text="@string/run_calorie" />
 
 
         </RelativeLayout>

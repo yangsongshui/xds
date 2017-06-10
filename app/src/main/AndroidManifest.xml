@@ -16,6 +16,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:name=".app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
@@ -58,7 +59,7 @@
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="68274d1d99c6f14e3de295865bc7315e" />
+            android:value="cd2f221abdce58e64f3bdee5caea27e7" />
 
         <activity android:name=".club.CompetitionActivity" />
         <activity android:name=".club.TroopsActivity" />
@@ -82,7 +83,10 @@
         <activity android:name=".my.AddActivity" />
         <activity android:name=".club.RecommendActivity" />
         <activity android:name=".club.UpdateActivity" />
-        <activity android:name=".club.MemberActivity"></activity>
+        <activity android:name=".club.MemberActivity" />
+        <activity android:name=".club.PhotoActivity" />
+        <activity android:name=".club.TopActivity" />
+        <activity android:name=".discover.OfflineStoreActivity"></activity>
     </application>
 
 </manifest>

@@ -201,6 +201,16 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/run_time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="00:00:00"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -302,41 +312,84 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/run_time_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/run_time"
+                android:layout_below="@+id/run_calorie"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/run_time_tv"
+                    android:id="@+id/run_calorie_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="00:00:00"
+                    android:text="0"
                     android:textColor="@color/white"
                     android:textSize="15sp" />
 
-
+                <TextView
+                    style="@style/RunMenuText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calorie" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/run_time"
+                android:id="@+id/run_calorie"
                 style="@style/RunMenuTextImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/time"
-                android:text="@string/run_time" />
+                android:drawableLeft="@drawable/kcal"
+                android:text="@string/run_calorie" />
 
 
         </RelativeLayout>
+
+        <!-- <RelativeLayout
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:orientation="vertical"
+             android:visibility="gone">
+
+             <LinearLayout
+                 android:id="@+id/run_time_ll"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/run_time"
+                 android:layout_marginTop="5dp"
+                 android:gravity="center"
+                 android:orientation="horizontal">
+
+                 <TextView
+                     android:id="@+id/run_time_tv"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="00:00:00"
+                     android:textColor="@color/white"
+                     android:textSize="15sp" />
+
+
+             </LinearLayout>
+
+             <TextView
+                 android:id="@+id/run_time"
+                 style="@style/RunMenuTextImage"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:drawableLeft="@drawable/time"
+                 android:text="@string/run_time" />
+
+
+         </RelativeLayout>-->
     </LinearLayout>
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:visibility="invisible"
         android:orientation="horizontal">
 
         <RelativeLayout
@@ -351,6 +404,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/run_cadence"
                 android:layout_centerVertical="true"
+
                 android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -375,6 +429,7 @@
                 style="@style/RunMenuTextImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:drawableLeft="@drawable/cadence"
                 android:text="@string/run_cadence" />
 
@@ -390,7 +445,7 @@
             android:gravity="center"
             android:orientation="vertical">
 
-   <!--         <LinearLayout
+   &lt;!&ndash;         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/run_heart"
@@ -418,7 +473,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/heart"
-                android:text="@string/run_heart" />-->
+                android:text="@string/run_heart" />&ndash;&gt;
 
 
         </RelativeLayout>
@@ -463,7 +518,7 @@
 
 
         </RelativeLayout>
-    </LinearLayout>
+    </LinearLayout>-->
 
     <RelativeLayout
         android:id="@+id/riding_begin"
@@ -487,4 +542,59 @@
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/pause_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/run_pause"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/riding_btn_bg"
+            android:gravity="center">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/begin"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="@string/run_pause"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/run_end"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/riding_btn_bg"
+            android:gravity="center">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/pause"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="@string/run_end"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

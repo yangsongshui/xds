@@ -12,37 +12,37 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp">
 
-        <TextView
+
+        <TextClock
             android:id="@+id/riding_current_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/riding_current_time"
-            android:textColor="@color/white"
+            android:format24Hour="HH:MM"
             android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+        <TextClock
             android:id="@+id/riding_current_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/riding_current_time"
+            android:format12Hour="yyyy-MM-dd"
+            android:format24Hour="yyyy-MM-dd"
             android:layout_marginTop="10dp"
-            android:text="@string/riding_current_date"
-            android:textColor="@color/white"
+            android:textStyle="bold"
             android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textColor="@color/white" />
 
-        <TextView
+        <TextClock
             android:id="@+id/riding_current_week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/riding_current_date"
+            android:format24Hour="EEEE"
             android:layout_marginTop="10dp"
-            android:text="@string/riding_current_week"
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/riding_weather_image"
             android:layout_width="wrap_content"
@@ -64,6 +64,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/riding_temperature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/riding_weather_description"

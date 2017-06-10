@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -53,13 +52,13 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView child_pic;
+
         private TextView child_time, child_linear, child_cadence,child_mileage,child_cal;
         private LinearLayout history_item;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            child_pic = (ImageView) itemView.findViewById(R.id.child_pic);
+
             child_time = (TextView) itemView.findViewById(R.id.child_time);
             child_linear = (TextView) itemView.findViewById(R.id.child_linear);
             child_cadence = (TextView) itemView.findViewById(R.id.child_cadence);

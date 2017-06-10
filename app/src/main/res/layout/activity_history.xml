@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/mercury"
     tools:context="com.pgt.xds.my.HistoryActivity">
 
     <RelativeLayout
@@ -41,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:background="@drawable/club_btn_bg"
+        android:background="@drawable/left_iv_bg"
         android:text="2月份"
         android:textColor="@color/rangoon_green" />
 

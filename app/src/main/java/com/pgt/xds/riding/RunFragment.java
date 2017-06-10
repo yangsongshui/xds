@@ -1,8 +1,9 @@
 package com.pgt.xds.riding;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.pgt.xds.BaseFragment;
@@ -20,6 +21,29 @@ public class RunFragment extends BaseFragment {
     boolean isBegin;
     @BindView(R.id.run_begin)
     TextView runBegin;
+    @BindView(R.id.run_fragment_temperature)
+    TextView runFragmentTemperature;
+    @BindView(R.id.left_instrument_current_value)
+    TextView leftInstrumentCurrentValue;
+    @BindView(R.id.center_instrument_current_value)
+    TextView centerInstrumentCurrentValue;
+    @BindView(R.id.right_instrument_current_value)
+    TextView rightInstrumentCurrentValue;
+    @BindView(R.id.run_time_tv)
+    TextView runTimeTv;
+    @BindView(R.id.run_linear_tv)
+    TextView runLinearTv;
+    @BindView(R.id.run_mileage_tv)
+    TextView runMileageTv;
+    @BindView(R.id.run_calorie_tv)
+    TextView runCalorieTv;
+    @BindView(R.id.riding_begin)
+    RelativeLayout ridingBegin;
+    @BindView(R.id.pause_ll)
+    LinearLayout pauseLl;
+
+
+
 
 
     @Override
@@ -35,31 +59,23 @@ public class RunFragment extends BaseFragment {
 
     private void initData() {
         isBegin = true;
+
     }
 
 
-    @OnClick({R.id.riding_begin})
+    @OnClick({R.id.riding_begin, R.id.run_pause, R.id.run_end})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-
             case R.id.riding_begin:
-                if (isBegin) {
-                    isBegin = false;
-                    runBegin.setText(R.string.run_pause);
-                    Drawable drawable = getResources().getDrawable(R.drawable.pause);
-                    // 这一步必须要做,否则不会显示.
-                    drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
-                    runBegin.setCompoundDrawables(drawable, null, null, null);
-                } else {
-                    isBegin = true;
-                    runBegin.setText(R.string.run_begin);
-                    Drawable drawable = getResources().getDrawable(R.drawable.begin);
-                    // 这一步必须要做,否则不会显示.
-                    drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
-                    runBegin.setCompoundDrawables(drawable, null, null, null);
-                }
+                pauseLl.setVisibility(View.VISIBLE);
+                ridingBegin.setVisibility(View.GONE);
+                break;
+            default:
+                pauseLl.setVisibility(View.GONE);
+                ridingBegin.setVisibility(View.VISIBLE);
                 break;
         }
     }
+
 
 }

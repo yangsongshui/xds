@@ -3,15 +3,11 @@
     android:id="@+id/history_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
     android:background="@color/white"
     android:orientation="vertical"
     android:paddingBottom="20dp">
 
-    <ImageView
-        android:id="@+id/child_pic"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:src="@drawable/pic" />
 
     <TextView
         android:id="@+id/child_time"

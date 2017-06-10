@@ -50,6 +50,7 @@
     <string name="heart">Bpm</string>
     <string name="run_pause">暂停</string>
     <string name="run_begin">开始</string>
+    <string name="run_end">结束</string>
     <string name="riding_current_time">16:04</string>
     <string name="riding_current_date">2017.05.04</string>
     <string name="riding_current_week">星期六</string>

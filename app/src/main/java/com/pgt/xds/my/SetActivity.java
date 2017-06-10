@@ -14,16 +14,6 @@ import butterknife.OnClick;
 public class SetActivity extends BaseActivity implements SwitchButton.OnCheckedChangeListener {
 
 
-    @BindView(R.id.set_gprs_tv)
-    TextView setGprsTv;
-    @BindView(R.id.set_gprs)
-    SwitchButton setGprs;
-    @BindView(R.id.textView6)
-    TextView textView6;
-    @BindView(R.id.set_prevent_tv)
-    TextView setPreventTv;
-    @BindView(R.id.set_prevent)
-    SwitchButton setPrevent;
     @BindView(R.id.set_voice_tv)
     TextView setVoiceTv;
     @BindView(R.id.set_voice)
@@ -50,8 +40,7 @@ public class SetActivity extends BaseActivity implements SwitchButton.OnCheckedC
 
     @Override
     protected void initListener() {
-        setGprs.setOnCheckedChangeListener(this);
-        setPrevent.setOnCheckedChangeListener(this);
+
         setVoice.setOnCheckedChangeListener(this);
         setBright.setOnCheckedChangeListener(this);
     }
@@ -80,10 +69,6 @@ public class SetActivity extends BaseActivity implements SwitchButton.OnCheckedC
     @Override
     public void onCheckedChanged(SwitchButton view, boolean isChecked) {
         switch (view.getId()) {
-            case R.id.set_gprs:
-                break;
-            case R.id.set_prevent:
-                break;
             case R.id.set_voice:
                 break;
             case R.id.set_bright:

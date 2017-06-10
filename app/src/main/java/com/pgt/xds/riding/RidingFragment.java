@@ -1,49 +1,81 @@
 package com.pgt.xds.riding;
 
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.amap.api.services.weather.LocalWeatherLiveResult;
+import com.pgt.xds.BaseFragment;
+import com.pgt.xds.MainActivity;
 import com.pgt.xds.R;
+import com.pgt.xds.connector.OnWeatherListener;
+
+import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * 骑行Fragment
  * Created by zheng on 2017/5/4.
  */
-public class RidingFragment extends Fragment implements View.OnClickListener{
+public class RidingFragment extends BaseFragment implements View.OnClickListener, OnWeatherListener {
 
-    @Nullable
+    @BindView(R.id.riding_current_time)
+    TextView ridingCurrentTime;
+    @BindView(R.id.riding_current_date)
+    TextView ridingCurrentDate;
+    @BindView(R.id.riding_current_week)
+    TextView ridingCurrentWeek;
+    @BindView(R.id.riding_weather_image)
+    ImageView ridingWeatherImage;
+    @BindView(R.id.riding_weather_description)
+    TextView ridingWeatherDescription;
+    @BindView(R.id.riding_sun_mileage_count)
+    TextView ridingSunMileageCount;
+    @BindView(R.id.riding_constant_speed_text)
+    TextView ridingConstantSpeedText;
+    @BindView(R.id.riding_max_speed_text)
+    TextView ridingMaxSpeedText;
+    @BindView(R.id.riding_total_time_text)
+    TextView ridingTotalTimeText;
+    @BindView(R.id.riding_temperature)
+    TextView riding_temperature;
+
+
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.riding_fragment,null);
-        initView(view);
-        initData();
-        initListener();
-        return view;
-    }
-
-    private void initView(View view){
-        view.findViewById(R.id.riding_begin).setOnClickListener(this);
-    }
-
-    private void initData(){
-
-    }
-
-    private void initListener(){
+    protected void initData(View layout, Bundle savedInstanceState) {
+        MainActivity activity = (MainActivity) getActivity();
+        activity.setOnWeatherListener(this);
 
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.riding_begin://骑行点击事件
-                startActivity(new Intent(getActivity(),RidingStateActivity.class));
-                break;
-        }
+    protected int getContentView() {
+        return R.layout.riding_fragment;
+    }
+
+
+
+    @Override
+    public void OnWeather(LocalWeatherLiveResult localWeatherLiveResult) {
+        ridingWeatherDescription.setText(localWeatherLiveResult.getLiveResult().getWeather());
+        riding_temperature.setText(localWeatherLiveResult.getLiveResult().getTemperature() + "°");
+        Log.e("天气数据", localWeatherLiveResult.getLiveResult().getWeather());
+    }
+
+
+
+
+    @OnClick(R.id.riding_begin)
+    public void onViewClicked() {
+        startActivity(new Intent(getActivity(), RidingStateActivity.class));
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

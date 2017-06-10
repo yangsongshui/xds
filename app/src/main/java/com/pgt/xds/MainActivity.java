@@ -2,13 +2,24 @@ package com.pgt.xds;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.AMapLocationListener;
+import com.amap.api.services.weather.LocalWeatherForecastResult;
+import com.amap.api.services.weather.LocalWeatherLive;
+import com.amap.api.services.weather.LocalWeatherLiveResult;
+import com.amap.api.services.weather.WeatherSearch;
+import com.amap.api.services.weather.WeatherSearchQuery;
 import com.pgt.xds.club.ClubFragment;
+import com.pgt.xds.connector.OnWeatherListener;
 import com.pgt.xds.discover.DiscoverFragment;
 import com.pgt.xds.my.MyFragment;
 import com.pgt.xds.my.SetActivity;
@@ -20,7 +31,7 @@ import java.util.List;
 /**
  * 主界面
  */
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements WeatherSearch.OnWeatherSearchListener {
 
     private RidingFragment ridingFragment;//骑行Fragment
     private ClubFragment clubFragment;//俱乐部Fragment
@@ -37,6 +48,15 @@ public class MainActivity extends BaseActivity {
     private TextView findCar;//找车
     private ImageView setImage;//设置
     private int tabState;//底部导航栏点击状态
+    //声明AMapLocationClient类对象
+    public AMapLocationClient mLocationClient = null;
+    //声明AMapLocationClientOption对象
+    public AMapLocationClientOption mLocationOption = null;
+    WeatherSearchQuery mquery;
+    WeatherSearch mweathersearch;
+
+
+    OnWeatherListener onWeatherListener;
 
     @Override
     protected int getContentViewId() {
@@ -57,7 +77,44 @@ public class MainActivity extends BaseActivity {
         views.add(clubLayout);
         views.add(discoverLayout);
         views.add(myLayout);
+        //初始化定位
+        mLocationClient = new AMapLocationClient(getApplicationContext());
+        //设置定位回调监听
+        mLocationClient.setLocationListener(mLocationListener);
+        //初始化AMapLocationClientOption对象
+        mLocationOption = new AMapLocationClientOption();
+        //获取一次定位结果
+        mLocationOption.setOnceLocation(true);
+        mLocationOption.setOnceLocationLatest(true);
+        mLocationOption.setNeedAddress(true);
+        //给定位客户端对象设置定位参数
+        mLocationClient.setLocationOption(mLocationOption);
+        //启动定位
+        mLocationClient.startLocation();
     }
+
+    //声明定位回调监听器
+    public AMapLocationListener mLocationListener = new AMapLocationListener() {
+        @Override
+        public void onLocationChanged(AMapLocation aMapLocation) {
+            if (aMapLocation != null) {
+                if (aMapLocation.getErrorCode() == 0) {
+                    //可在其中解析amapLocation获取相应内容。
+                    Log.e("定位数据", aMapLocation.getCity());
+                    mquery = new WeatherSearchQuery(aMapLocation.getCity(), WeatherSearchQuery.WEATHER_TYPE_LIVE);
+                    mweathersearch = new WeatherSearch(MainActivity.this);
+                    mweathersearch.setOnWeatherSearchListener(MainActivity.this);
+                    mweathersearch.setQuery(mquery);
+                    mweathersearch.searchWeatherAsyn(); //异步搜索
+                } else {
+                    //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
+                    Log.e("AmapError", "location Error, ErrCode:"
+                            + aMapLocation.getErrorCode() + ", errInfo:"
+                            + aMapLocation.getErrorInfo());
+                }
+            }
+        }
+    };
 
     @Override
     protected void initData() {
@@ -184,5 +241,34 @@ public class MainActivity extends BaseActivity {
                 views.get(i).setBackgroundResource(R.color.main_botm_color);
             }
         }
+    }
+
+    /**
+     * 实时天气查询回调
+     */
+    @Override
+    public void onWeatherLiveSearched(LocalWeatherLiveResult localWeatherLiveResult, int i) {
+        if (i == 1000) {
+            if (localWeatherLiveResult != null) {
+                LocalWeatherLive weatherlive = localWeatherLiveResult.getLiveResult();
+
+                Log.e("定位数据", weatherlive.getWeather());
+                if (onWeatherListener != null)
+                    onWeatherListener.OnWeather(localWeatherLiveResult);
+            } else {
+                Log.e("定位数据", i + "");
+            }
+        } else {
+            Log.e("定位数据", i + "");
+        }
+    }
+
+    @Override
+    public void onWeatherForecastSearched(LocalWeatherForecastResult localWeatherForecastResult, int i) {
+
+    }
+
+    public void setOnWeatherListener(OnWeatherListener onWeatherListener) {
+        this.onWeatherListener = onWeatherListener;
     }
 }

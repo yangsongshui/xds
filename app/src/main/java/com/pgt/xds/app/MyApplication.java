@@ -2,12 +2,16 @@ package com.pgt.xds.app;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.res.TypedArray;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
+import com.pgt.xds.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by omni20170501 on 2017/6/8.
@@ -18,6 +22,7 @@ public class MyApplication extends Application {
 
     private static MyApplication instance;
     public static List<Activity> activitiesList = new ArrayList<Activity>(); // 活动管理集合
+    public static Map<String, Integer> mMap = new HashMap<>();
 
     /**
      * 获取单例
@@ -32,6 +37,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+        setWeather();
     }
 
     /**
@@ -70,5 +76,18 @@ public class MyApplication extends Application {
 
     }
 
+    private void setWeather() {
+        mMap.clear();
+        String[] weather = getResources().getStringArray(R.array.weather);
+        TypedArray ar = getResources().obtainTypedArray(R.array.actions_images);
+        for (int i = 0; i < weather.length; i++) {
+            mMap.put(weather[i], ar.getResourceId(i, 0));
+
+        }
+    }
+
+    public int getWeather(String key) {
+        return mMap.get(key);
+    }
 
 }

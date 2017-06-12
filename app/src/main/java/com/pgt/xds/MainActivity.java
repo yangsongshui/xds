@@ -14,7 +14,6 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.services.weather.LocalWeatherForecastResult;
-import com.amap.api.services.weather.LocalWeatherLive;
 import com.amap.api.services.weather.LocalWeatherLiveResult;
 import com.amap.api.services.weather.WeatherSearch;
 import com.amap.api.services.weather.WeatherSearchQuery;
@@ -250,16 +249,13 @@ public class MainActivity extends BaseActivity implements WeatherSearch.OnWeathe
     public void onWeatherLiveSearched(LocalWeatherLiveResult localWeatherLiveResult, int i) {
         if (i == 1000) {
             if (localWeatherLiveResult != null) {
-                LocalWeatherLive weatherlive = localWeatherLiveResult.getLiveResult();
-
-                Log.e("定位数据", weatherlive.getWeather());
                 if (onWeatherListener != null)
                     onWeatherListener.OnWeather(localWeatherLiveResult);
             } else {
-                Log.e("定位数据", i + "");
+
             }
         } else {
-            Log.e("定位数据", i + "");
+
         }
     }
 

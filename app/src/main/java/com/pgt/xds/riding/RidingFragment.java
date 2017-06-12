@@ -2,7 +2,6 @@ package com.pgt.xds.riding;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,6 +10,7 @@ import com.amap.api.services.weather.LocalWeatherLiveResult;
 import com.pgt.xds.BaseFragment;
 import com.pgt.xds.MainActivity;
 import com.pgt.xds.R;
+import com.pgt.xds.app.MyApplication;
 import com.pgt.xds.connector.OnWeatherListener;
 
 import butterknife.BindView;
@@ -22,12 +22,7 @@ import butterknife.OnClick;
  */
 public class RidingFragment extends BaseFragment implements View.OnClickListener, OnWeatherListener {
 
-    @BindView(R.id.riding_current_time)
-    TextView ridingCurrentTime;
-    @BindView(R.id.riding_current_date)
-    TextView ridingCurrentDate;
-    @BindView(R.id.riding_current_week)
-    TextView ridingCurrentWeek;
+
     @BindView(R.id.riding_weather_image)
     ImageView ridingWeatherImage;
     @BindView(R.id.riding_weather_description)
@@ -63,7 +58,7 @@ public class RidingFragment extends BaseFragment implements View.OnClickListener
     public void OnWeather(LocalWeatherLiveResult localWeatherLiveResult) {
         ridingWeatherDescription.setText(localWeatherLiveResult.getLiveResult().getWeather());
         riding_temperature.setText(localWeatherLiveResult.getLiveResult().getTemperature() + "°");
-        Log.e("天气数据", localWeatherLiveResult.getLiveResult().getWeather());
+        ridingWeatherImage.setImageResource(MyApplication.newInstance().getWeather(localWeatherLiveResult.getLiveResult().getWeather()));
     }
 
 

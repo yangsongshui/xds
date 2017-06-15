@@ -13,7 +13,7 @@ import com.amap.api.services.route.DriveRouteResult;
 import com.amap.api.services.route.RideRouteResult;
 import com.amap.api.services.route.RouteSearch;
 import com.amap.api.services.route.WalkRouteResult;
-import com.pgt.xds.BaseFragment;
+import com.pgt.xds.base.BaseFragment;
 import com.pgt.xds.R;
 
 /**

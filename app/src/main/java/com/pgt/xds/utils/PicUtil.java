@@ -3,7 +3,7 @@ package com.pgt.xds.utils;
 import android.os.Environment;
 
 /**
- * Created by yangsong on 2017/3/11.
+ * Created by ys on 2017/3/11.
  */
 
 public class PicUtil {

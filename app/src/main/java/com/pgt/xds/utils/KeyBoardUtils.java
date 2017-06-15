@@ -1,7 +1,7 @@
 package com.pgt.xds.utils;
 
 /**
- * Created by moses on 2016/11/10.
+ * Created by ys on 2016/11/10.
  */
 
 import android.app.Activity;

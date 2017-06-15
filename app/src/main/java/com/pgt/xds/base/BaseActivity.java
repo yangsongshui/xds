@@ -1,4 +1,4 @@
-package com.pgt.xds;
+package com.pgt.xds.base;
 
 import android.app.Activity;
 import android.os.Bundle;

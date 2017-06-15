@@ -1,1 +1,1 @@
-include ':app', ':gobeebike-android'
+include ':app'

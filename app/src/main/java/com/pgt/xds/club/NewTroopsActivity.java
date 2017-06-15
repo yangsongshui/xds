@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.pgt.xds.BaseActivity;
+import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.R;
 import com.pgt.xds.view.CompilePopupWindow;
 

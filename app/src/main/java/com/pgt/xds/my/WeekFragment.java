@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import com.pgt.xds.BaseFragment;
+import com.pgt.xds.base.BaseFragment;
 import com.pgt.xds.R;
 
 /**

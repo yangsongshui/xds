@@ -54,6 +54,10 @@ public class OfflineStoreActivity extends Activity implements AMap.OnMyLocationC
         mapView = (MapView) findViewById(R.id.myMap);
         mapView.onCreate(savedInstanceState);// 此方法须覆写，虚拟机需要在很多情况下保存地图绘制的当前状态。
         initMap();
+        query = new PoiSearch.Query("喜德盛", "", "");// 第一个参数表示搜索字符串，第二个参数表示poi搜索类型，第三个参数表示poi搜索区域（空字符串代表全国）
+        poiSearch = new PoiSearch(this, query);
+        query.setPageSize(20);// 设置每页最多返回多少条poiitem
+        query.setPageNum(0);// 设置查第一页
     }
 
     private void initMap() {
@@ -69,7 +73,7 @@ public class OfflineStoreActivity extends Activity implements AMap.OnMyLocationC
                 fromResource(R.drawable.point4));
         aMap.setMyLocationStyle(myLocationStyle);//设置定位蓝点的Style。
         aMap.setMyLocationEnabled(true);// 设置为true表示启动显示定位蓝点，false表示隐藏定位蓝点并不进行定位，默认是false。
-
+        //定位监听
         aMap.setOnMyLocationChangeListener(this);
     }
 
@@ -80,7 +84,7 @@ public class OfflineStoreActivity extends Activity implements AMap.OnMyLocationC
                 finish();
                 break;
             case R.id.inquire_list:
-                startActivity(new Intent(this,InquireActivity.class));
+                startActivity(new Intent(this, InquireActivity.class));
                 break;
         }
     }
@@ -109,12 +113,8 @@ public class OfflineStoreActivity extends Activity implements AMap.OnMyLocationC
 
     @Override
     public void onMyLocationChange(Location location) {
-        query = new PoiSearch.Query("喜德盛", "", "");// 第一个参数表示搜索字符串，第二个参数表示poi搜索类型，第三个参数表示poi搜索区域（空字符串代表全国）
-        poiSearch = new PoiSearch(this, query);
-        query.setPageSize(20);// 设置每页最多返回多少条poiitem
-        query.setPageNum(0);// 设置查第一页
+
         if (location != null) {
-            poiSearch = new PoiSearch(this, query);
             poiSearch.setOnPoiSearchListener(this);
             lp = new LatLonPoint(location.getLatitude(), location.getLongitude());
             poiSearch.setBound(new PoiSearch.SearchBound(lp, 5000, true));//

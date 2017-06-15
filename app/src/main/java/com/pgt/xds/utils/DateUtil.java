@@ -8,7 +8,7 @@ import java.util.GregorianCalendar;
 import java.util.regex.Pattern;
 
 /**
- * Created by Administrator on 2016/5/30.
+ * Created by ys on 2016/5/30.
  */
 public class DateUtil {
 

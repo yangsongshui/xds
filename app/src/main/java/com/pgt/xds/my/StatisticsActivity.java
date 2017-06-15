@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.pgt.xds.BaseActivity;
+import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.R;
 
 import java.util.ArrayList;

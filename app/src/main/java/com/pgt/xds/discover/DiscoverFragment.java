@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.pgt.xds.BaseFragment;
+import com.pgt.xds.base.BaseFragment;
 import com.pgt.xds.R;
 
 import butterknife.OnClick;

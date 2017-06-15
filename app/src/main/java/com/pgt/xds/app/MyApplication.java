@@ -7,6 +7,7 @@ import android.content.res.TypedArray;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.pgt.xds.R;
+import com.pgt.xds.utils.AppContextUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by omni20170501 on 2017/6/8.
+ * Created by ys on 2017/6/8.
  */
 
 public class MyApplication extends Application {
@@ -38,6 +39,7 @@ public class MyApplication extends Application {
         super.onCreate();
         instance = this;
         setWeather();
+        AppContextUtil.init(this);
     }
 
     /**

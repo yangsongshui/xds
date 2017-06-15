@@ -20,7 +20,7 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.Utils;
-import com.pgt.xds.BaseFragment;
+import com.pgt.xds.base.BaseFragment;
 import com.pgt.xds.R;
 import com.pgt.xds.utils.DateUtil;
 import com.pgt.xds.view.MyMarkerView;

@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
-    apply plugin: 'com.jakewharton.butterknife'
-    apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.neenbedankt.android-apt'
 android {
     compileSdkVersion 23
     buildToolsVersion "25.0.2"
@@ -24,10 +24,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/AMap3DMap_5.1.0_AMapNavi_5.1.0_AMapSearch_5.1.0_AMapLocation_3.4.0_20170518.jar')
     compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.squareup.retrofit2:retrofit:2.2.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
-    compile 'com.squareup.retrofit2:converter-scalars:2.2.0'
-    compile 'com.google.code.gson:gson:2.7'
     compile 'com.jakewharton:butterknife:8.4.0'
     compile 'com.zhy:mpermission-api:1.0.0'
     compile 'com.android.support:recyclerview-v7:23.4.0'
@@ -36,7 +32,20 @@ dependencies {
     compile 'com.android.support:support-v4:23.4.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    /** rxjava **/
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+
+    /** retrofit **/
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    /**  okhttp  **/
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
     testCompile 'junit:junit:4.12'
     apt 'com.zhy:mpermission-compiler:1.0.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
 }

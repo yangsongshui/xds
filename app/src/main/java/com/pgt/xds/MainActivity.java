@@ -17,6 +17,7 @@ import com.amap.api.services.weather.LocalWeatherForecastResult;
 import com.amap.api.services.weather.LocalWeatherLiveResult;
 import com.amap.api.services.weather.WeatherSearch;
 import com.amap.api.services.weather.WeatherSearchQuery;
+import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.club.ClubFragment;
 import com.pgt.xds.connector.OnWeatherListener;
 import com.pgt.xds.discover.DiscoverFragment;

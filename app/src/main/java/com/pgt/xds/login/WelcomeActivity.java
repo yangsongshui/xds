@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.pgt.xds.BaseActivity;
+import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.R;
 import com.zhy.m.permission.MPermissions;
 import com.zhy.m.permission.PermissionDenied;

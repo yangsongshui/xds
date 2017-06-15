@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 /**
- * Created by omni20170501 on 2017/6/7.
+ * Created by ys on 2017/6/7.
  */
 
 public class Toastor {

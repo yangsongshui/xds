@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.pgt.xds.BaseFragment;
+import com.pgt.xds.base.BaseFragment;
 import com.pgt.xds.R;
 
 import butterknife.BindView;

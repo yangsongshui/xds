@@ -41,7 +41,7 @@ import java.util.List;
 
 /**
  * 公共工具类
- * Created by zheng on 2017/3/29.
+ * Created by ys on 2017/3/29.
  */
 public class CommonUtils {
     private static List<Activity> list = new ArrayList<Activity>();

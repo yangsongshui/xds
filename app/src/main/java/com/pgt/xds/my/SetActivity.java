@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.pgt.xds.BaseActivity;
+import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.R;
 import com.suke.widget.SwitchButton;
 

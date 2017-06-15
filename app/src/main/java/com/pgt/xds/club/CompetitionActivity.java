@@ -5,8 +5,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.pgt.xds.BaseActivity;
-import com.pgt.xds.OnItemCheckListener;
+import com.pgt.xds.base.BaseActivity;
+import com.pgt.xds.connector.OnItemCheckListener;
 import com.pgt.xds.R;
 import com.pgt.xds.club.adapter.CompetitionAdapter;
 import com.pgt.xds.utils.Toastor;

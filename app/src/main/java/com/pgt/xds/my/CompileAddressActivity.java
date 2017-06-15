@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.bigkoo.pickerview.OptionsPickerView;
-import com.pgt.xds.BaseActivity;
+import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.R;
 import com.pgt.xds.utils.GetCity;
 

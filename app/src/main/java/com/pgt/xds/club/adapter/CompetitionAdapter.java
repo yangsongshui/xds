@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.pgt.xds.OnItemCheckListener;
+import com.pgt.xds.connector.OnItemCheckListener;
 import com.pgt.xds.R;
 
 import java.util.List;

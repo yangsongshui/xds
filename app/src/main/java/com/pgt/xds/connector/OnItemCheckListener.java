@@ -1,4 +1,4 @@
-package com.pgt.xds;
+package com.pgt.xds.connector;
 
 import android.support.v7.widget.RecyclerView;
 

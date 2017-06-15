@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.pgt.xds.BaseActivity;
-import com.pgt.xds.OnItemCheckListener;
+import com.pgt.xds.base.BaseActivity;
+import com.pgt.xds.connector.OnItemCheckListener;
 import com.pgt.xds.R;
 import com.pgt.xds.club.adapter.TroopsAdapter;
 import com.pgt.xds.utils.Toastor;

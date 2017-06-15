@@ -6,8 +6,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.bigkoo.pickerview.TimePickerView;
-import com.pgt.xds.BaseActivity;
-import com.pgt.xds.OnItemCheckListener;
+import com.pgt.xds.base.BaseActivity;
+import com.pgt.xds.connector.OnItemCheckListener;
 import com.pgt.xds.R;
 import com.pgt.xds.my.adapter.HistoryAdapter;
 import com.pgt.xds.utils.DateUtil;

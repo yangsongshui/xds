@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 
 /**
- * Created by yangsong on 2017/3/9.
+ * Created by ys on 2017/3/9.
  */
 
 public class GetCity {

@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.amap.api.services.weather.LocalWeatherLiveResult;
-import com.pgt.xds.BaseFragment;
+import com.pgt.xds.base.BaseFragment;
 import com.pgt.xds.MainActivity;
 import com.pgt.xds.R;
 import com.pgt.xds.app.MyApplication;

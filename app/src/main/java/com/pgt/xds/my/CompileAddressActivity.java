@@ -1,11 +1,16 @@
 package com.pgt.xds.my;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.AMapLocationListener;
 import com.bigkoo.pickerview.OptionsPickerView;
-import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.R;
+import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.utils.GetCity;
 
 import butterknife.BindView;
@@ -18,7 +23,10 @@ public class CompileAddressActivity extends BaseActivity {
     private OptionsPickerView optionsPickerView;//地区选择
     GetCity getCity;
     String address = "";
-
+    //声明AMapLocationClient类对象
+    public AMapLocationClient mLocationClient = null;
+    //声明AMapLocationClientOption对象
+    public AMapLocationClientOption mLocationOption = null;
     @Override
     protected int getContentViewId() {
         return R.layout.activity_compile_address;
@@ -51,7 +59,18 @@ public class CompileAddressActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-
+        //初始化定位
+        mLocationClient = new AMapLocationClient(getApplicationContext());
+        //设置定位回调监听
+        mLocationClient.setLocationListener(mLocationListener);
+        //初始化AMapLocationClientOption对象
+        mLocationOption = new AMapLocationClientOption();
+        //获取一次定位结果
+        mLocationOption.setOnceLocation(true);
+        mLocationOption.setOnceLocationLatest(true);
+        mLocationOption.setNeedAddress(true);
+        //给定位客户端对象设置定位参数
+        mLocationClient.setLocationOption(mLocationOption);
     }
 
     @Override
@@ -73,6 +92,8 @@ public class CompileAddressActivity extends BaseActivity {
                 break;
             case R.id.search_address:
                 //使用当前位置
+                //启动定位
+                mLocationClient.startLocation();
                 break;
             case R.id.compile_city_ll:
                 //选择地址
@@ -82,4 +103,23 @@ public class CompileAddressActivity extends BaseActivity {
                 break;
         }
     }
+    //声明定位回调监听器
+    public AMapLocationListener mLocationListener = new AMapLocationListener() {
+        @Override
+        public void onLocationChanged(AMapLocation aMapLocation) {
+            if (aMapLocation != null) {
+                if (aMapLocation.getErrorCode() == 0) {
+                    //可在其中解析amapLocation获取相应内容。
+                    Log.e("定位数据", aMapLocation.getCity());
+                    compileCity.setText(aMapLocation.getAddress());
+
+                } else {
+                    //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
+                    Log.e("AmapError", "location Error, ErrCode:"
+                            + aMapLocation.getErrorCode() + ", errInfo:"
+                            + aMapLocation.getErrorInfo());
+                }
+            }
+        }
+    };
 }

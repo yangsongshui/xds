@@ -11,16 +11,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.MainActivity;
 import com.pgt.xds.R;
+import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.utils.CommonUtils;
 
 /**
  * 登录界面
  * Created by zheng on 2017/5/2.
  */
-public class LoginActivity extends BaseActivity implements TextWatcher{
+public class LoginActivity extends BaseActivity implements TextWatcher {
 
 
     private EditText phoneEdit;
@@ -44,11 +44,13 @@ public class LoginActivity extends BaseActivity implements TextWatcher{
         showPasswordImage = (ImageView) findViewById(R.id.show_password_image);
         loginBtn = (TextView) findViewById(R.id.login_btn);
         loginBtn.setEnabled(false);
+
     }
+
+
 
     @Override
     protected void initData() {
-
     }
 
     @Override
@@ -64,19 +66,19 @@ public class LoginActivity extends BaseActivity implements TextWatcher{
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.register_text_click://注册点击事件
-                startActivity(new Intent(this,RegisterOneActivity.class));
+                startActivity(new Intent(this, RegisterOneActivity.class));
                 break;
             case R.id.login_delete_image://删除按钮点击事件
                 phoneEdit.setText("");
                 break;
             case R.id.show_password_image_layout://显示或隐藏密码点击事件
-                if (!showAndHindPassword){
+                if (!showAndHindPassword) {
                     showPasswordImage.setImageResource(R.drawable.show_password);
                     showAndHindPassword = true;
                     passwordEdit.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                }else{
+                } else {
                     showPasswordImage.setImageResource(R.drawable.hind_password);
                     showAndHindPassword = false;
                     passwordEdit.setTransformationMethod(PasswordTransformationMethod.getInstance());
@@ -84,14 +86,14 @@ public class LoginActivity extends BaseActivity implements TextWatcher{
                 passwordEdit.setSelection(passwordEdit.getText().length());
                 break;
             case R.id.forget_password_text://忘记密码点击事件
-                startActivity(new Intent(this,ForgetPasswordActivity.class));
+                startActivity(new Intent(this, ForgetPasswordActivity.class));
                 break;
             case R.id.login_btn://登录按钮点击事件
                 String phone = phoneEdit.getText().toString().trim();
                 String password = passwordEdit.getText().toString().trim();
-                if (!CommonUtils.isNumber(phone) || phone.length() != 11){
-                    Toast.makeText(this,getResources().getString(R.string.phone_incorrectness),Toast.LENGTH_LONG).show();
-                }else{
+                if (!CommonUtils.isNumber(phone) || phone.length() != 11) {
+                    Toast.makeText(this, getResources().getString(R.string.phone_incorrectness), Toast.LENGTH_LONG).show();
+                } else {
                     startActivity(new Intent(this, MainActivity.class));
                     finish();
                 }
@@ -113,10 +115,10 @@ public class LoginActivity extends BaseActivity implements TextWatcher{
     public void afterTextChanged(Editable editable) {
         String phone = phoneEdit.getText().toString().trim();
         String password = passwordEdit.getText().toString().trim();
-        if (phone.length() > 0 && password.length() > 0){
+        if (phone.length() > 0 && password.length() > 0) {
             loginBtn.setEnabled(true);
             loginBtn.setBackgroundResource(R.drawable.title_right_click_bg);
-        }else{
+        } else {
             loginBtn.setEnabled(false);
             loginBtn.setBackgroundResource(R.color.btn_no_click);
         }

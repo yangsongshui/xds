@@ -524,8 +524,9 @@
         android:id="@+id/riding_begin"
         android:layout_width="150dp"
         android:layout_height="40dp"
+
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/riding_btn_bg"
         android:gravity="center">
 
@@ -548,8 +549,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:orientation="horizontal">
 
         <RelativeLayout
             android:id="@+id/run_pause"

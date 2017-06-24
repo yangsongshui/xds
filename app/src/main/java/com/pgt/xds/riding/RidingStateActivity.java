@@ -1,6 +1,7 @@
 package com.pgt.xds.riding;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -55,7 +56,7 @@ public class RidingStateActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.search_layout:
-
+                startActivity(new Intent(this, DetailsActivity.class));
                 break;
             case R.id.riding_state_run_layout://骑行点击事件
                 checkedFragment(0);

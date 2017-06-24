@@ -86,7 +86,8 @@
         <activity android:name=".club.MemberActivity" />
         <activity android:name=".club.PhotoActivity" />
         <activity android:name=".club.TopActivity" />
-        <activity android:name=".discover.OfflineStoreActivity"></activity>
+        <activity android:name=".discover.OfflineStoreActivity" />
+        <activity android:name=".riding.DetailsActivity"></activity>
     </application>
 
 </manifest>

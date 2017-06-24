@@ -75,6 +75,7 @@ public class RunFragment extends BaseFragment {
                 ridingBegin.setVisibility(View.VISIBLE);
                 break;
         }
+
     }
 
 

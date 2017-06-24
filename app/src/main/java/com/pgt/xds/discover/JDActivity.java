@@ -75,21 +75,21 @@ public class JDActivity extends BaseActivity {
      */
     private boolean shouldOverrideUrlLoadingByApp(WebView view, String url) {
         if (url.startsWith("http") || url.startsWith("https") || url.startsWith("ftp")) {
-            //不处理http, https, ftp的请求
+
             return false;
         }
         Intent intent;
         try {
             intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
         } catch (URISyntaxException e) {
-            //XLLog.e(TAG, "URISyntaxException: " + e.getLocalizedMessage());
+
             return false;
         }
         intent.setComponent(null);
         try {
             startActivity(intent);
         } catch (ActivityNotFoundException e) {
-           // XLLog.e(TAG, "ActivityNotFoundException: " + e.getLocalizedMessage());
+
             return false;
         }
         return true;

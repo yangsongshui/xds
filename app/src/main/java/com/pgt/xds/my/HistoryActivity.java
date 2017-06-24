@@ -1,15 +1,17 @@
 package com.pgt.xds.my;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
 import com.bigkoo.pickerview.TimePickerView;
+import com.pgt.xds.R;
 import com.pgt.xds.base.BaseActivity;
 import com.pgt.xds.connector.OnItemCheckListener;
-import com.pgt.xds.R;
 import com.pgt.xds.my.adapter.HistoryAdapter;
+import com.pgt.xds.riding.DetailsActivity;
 import com.pgt.xds.utils.DateUtil;
 import com.pgt.xds.utils.Toastor;
 
@@ -90,5 +92,6 @@ public class HistoryActivity extends BaseActivity implements OnItemCheckListener
     @Override
     public void OnItemCheck(RecyclerView.ViewHolder viewHolder, int position) {
         toastor.showSingletonToast("点击了" + position);
+        startActivity(new Intent(this, DetailsActivity.class));
     }
 }

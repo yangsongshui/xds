@@ -55,7 +55,7 @@
     <string name="riding_current_date">2017.05.04</string>
     <string name="riding_current_week">星期六</string>
     <string name="riding_sunny_weather">天气晴</string>
-    <string name="riding_temperature">0℃</string>
+    <string name="riding_temperature">℃</string>
     <string name="riding_sun_mileage">骑行总里程</string>
     <string name="riding_constant_speed">匀速</string>
     <string name="riding_max_speed">最高时速</string>
@@ -64,6 +64,9 @@
     <string name="riding_temperature_text">摄氏度</string>
     <string name="riding_speed_per_hour">Speed per hour</string>
     <string name="riding_temperature_unit">Km/h</string>
+    <string name="riding_details">骑行详情</string>
+    <string name="riding_type">单车型号：</string>
+    <string name="riding_T">温度</string>
     <!--navigation-->
     <string name="navigation_time">运动时间</string>
     <string name="navigation_speed"> 即时速度</string>
@@ -183,6 +186,12 @@
     <string name="marker_mileage">里程:</string>
     <string name="marker_time">时间:</string>
     <string name="marker_min">min</string>
+    <string name="input_num">请输入单车编号</string>
+    <string name="seek_distance">距离目的地</string>
+    <string name="seek_time">驾车预计到达时间</string>
+    <string name="seek_walk">步行预计到达时间</string>
+    <string name="seek_hour">小时</string>
+    <string name="seek_minute">分钟</string>
     <!--骑行统计-->
     <string name="statistics_week">本周统计</string>
     <string name="statistics_day">今日统计</string>

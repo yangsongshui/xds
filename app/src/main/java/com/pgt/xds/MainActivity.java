@@ -22,6 +22,7 @@ import com.pgt.xds.club.ClubFragment;
 import com.pgt.xds.connector.OnWeatherListener;
 import com.pgt.xds.discover.DiscoverFragment;
 import com.pgt.xds.my.MyFragment;
+import com.pgt.xds.my.SeekActivity;
 import com.pgt.xds.my.SetActivity;
 import com.pgt.xds.riding.RidingFragment;
 
@@ -147,7 +148,7 @@ public class MainActivity extends BaseActivity implements WeatherSearch.OnWeathe
                 break;
             case R.id.main_title_right_click://标题栏右边点击事件
                 if (tabState == 0) {//找车
-
+                    startActivity(new Intent(this, SeekActivity.class));
                 } else if (tabState == 3) {//设置
                     startActivity(new Intent(this, SetActivity.class));
                 }

@@ -37,7 +37,7 @@ public class RegisterTwoActivity extends BaseActivity implements TextWatcher, Ms
     private ProgressDialog progressDialog = null;
     private Toastor toastor;
     private int gender = 1;//性别类型 1：男 2：女
-
+    private String phone;
     @Override
     protected int getContentViewId() {
         return R.layout.register_two_activity;
@@ -45,6 +45,7 @@ public class RegisterTwoActivity extends BaseActivity implements TextWatcher, Ms
 
     @Override
     protected void initView() {
+        phone=getIntent().getStringExtra("phone");
         nicknameEdit = (EditText) findViewById(R.id.register_nickname_edit);
         manImage = (ImageView) findViewById(R.id.man_select_image);
         womanImage = (ImageView) findViewById(R.id.woman_select_image);

@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 
+import com.pgt.xds.app.MyApplication;
 import com.pgt.xds.utils.KeyBoardUtils;
 
 import butterknife.ButterKnife;
@@ -27,6 +28,7 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
         init();
         setContentView(getContentViewId());
         ButterKnife.bind(this);
+
         initView();
         initData();
         initListener();
@@ -146,5 +148,8 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
             }
         }
         return false;
+    }
+    public void showToastor(String msg){
+        MyApplication.newInstance().toastor.showSingletonToast(msg);
     }
 }

@@ -118,6 +118,7 @@ public class RecommendActivity extends BaseActivity {
                     //申请加入
                 } else if (type == 0) {
                     //进入聊天
+                    startActivity(new Intent(this, ChatActivity.class).putExtra("group",""));
                 }
                 break;
             case R.id.right_iv://设置

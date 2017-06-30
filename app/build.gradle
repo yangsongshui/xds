@@ -12,6 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    useLibrary 'org.apache.http.legacy'
     buildTypes {
         release {
             minifyEnabled false
@@ -23,13 +24,13 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/AMap3DMap_5.1.0_AMapNavi_5.1.0_AMapSearch_5.1.0_AMapLocation_3.4.0_20170518.jar')
-
-    /** rxjava **/
-
-    /** retrofit **/
-
-    /**  okhttp  **/
-
+    compile files('libs/SocialSDK_QQ_Simplify.jar')
+    compile files('libs/SocialSDK_WeChat_Simplify.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_tool.jar')
+    compile files('libs/SocialSDK_Sina_Simplify.jar')
+    compile files('libs/umeng_social_shareview.jar')
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.jakewharton:butterknife:8.4.0'
     compile 'com.zhy:mpermission-api:1.0.0'
@@ -46,7 +47,8 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.squareup.okhttp3:okhttp:3.3.1'
     compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    compile 'com.hyphenate:hyphenate-sdk:3.3.0'
     testCompile 'junit:junit:4.12'
     apt 'com.zhy:mpermission-compiler:1.0.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'

@@ -279,7 +279,7 @@ public class CompileInfoActivity extends BaseActivity implements View.OnFocusCha
 
     @Override
     public View[] filterViewByIds() {
-        View[] views = {compileHeightIv, compileWeightIv};
+        View[] views = {compileHeightIv, compileWeightIv,compileWeightEt,compileHeightEt};
         return views;
     }
 

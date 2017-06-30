@@ -48,7 +48,6 @@ public class LoginActivity extends BaseActivity implements TextWatcher {
     }
 
 
-
     @Override
     protected void initData() {
     }

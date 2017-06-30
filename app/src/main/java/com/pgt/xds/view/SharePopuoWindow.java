@@ -17,7 +17,8 @@ import com.pgt.xds.R;
  */
 
 public class SharePopuoWindow extends PopupWindow {
-    private TextView mall_friend_tv,mall_weixin_iv,mall_QQ_tv;
+    private TextView qq_iv, wechat_tv,moments_iv,sina_iv;
+
     private View mMenuView;
 
     public SharePopuoWindow(Context context, View.OnClickListener itemsOnClick) {
@@ -25,13 +26,15 @@ public class SharePopuoWindow extends PopupWindow {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mMenuView = inflater.inflate(R.layout.share_pop, null);
-        mall_friend_tv = (TextView) mMenuView.findViewById(R.id.mall_friend_tv);
-        mall_weixin_iv = (TextView) mMenuView.findViewById(R.id.mall_weixin_iv);
-        mall_QQ_tv = (TextView) mMenuView.findViewById(R.id.mall_QQ_tv);
-        //设置按钮监听
-        mall_friend_tv.setOnClickListener(itemsOnClick);
-        mall_weixin_iv.setOnClickListener(itemsOnClick);
-        mall_QQ_tv.setOnClickListener(itemsOnClick);
+
+        qq_iv = (TextView) mMenuView.findViewById(R.id.qq_iv);
+        wechat_tv = (TextView) mMenuView.findViewById(R.id.wechat_tv);
+        moments_iv = (TextView) mMenuView.findViewById(R.id.moments_iv);
+        sina_iv = (TextView) mMenuView.findViewById(R.id.sina_iv);
+        qq_iv.setOnClickListener(itemsOnClick);
+        wechat_tv.setOnClickListener(itemsOnClick);
+        moments_iv.setOnClickListener(itemsOnClick);
+        sina_iv.setOnClickListener(itemsOnClick);
         //设置SelectPicPopupWindow的View
         this.setContentView(mMenuView);
         //设置SelectPicPopupWindow弹出窗体的宽
@@ -52,9 +55,9 @@ public class SharePopuoWindow extends PopupWindow {
             public boolean onTouch(View v, MotionEvent event) {
 
                 int height = mMenuView.findViewById(R.id.pop_layout).getTop();
-                int y=(int) event.getY();
-                if(event.getAction()==MotionEvent.ACTION_UP){
-                    if(y<height){
+                int y = (int) event.getY();
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (y < height) {
                         dismiss();
                     }
                 }

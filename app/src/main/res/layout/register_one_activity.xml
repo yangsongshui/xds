@@ -118,10 +118,56 @@
             android:textSize="14sp"
             android:background="@null"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/verification_code_text" />
+            android:layout_toEndOf="@+id/verification_code_text"
+            android:layout_toStartOf="@+id/get_verification_code_text" />
 
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/input_color"
+        android:layout_marginLeft="10dp">
 
+        <TextView
+            android:id="@+id/login_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/password"/>
+        <EditText
+            android:id="@+id/register_password_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/login_password_text"
+            android:layout_toLeftOf="@+id/show_password_image_layout"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical|left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:inputType="textPassword"
+            android:background="@null"/>
+
+        <RelativeLayout
+            android:id="@+id/show_password_image_layout"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/show_password_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:layout_centerInParent="true"
+                android:src="@drawable/hind_password"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

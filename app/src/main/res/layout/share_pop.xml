@@ -8,39 +8,70 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/white">
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/mall_friend_tv"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawablePadding="5dp"
-            android:drawableTop="@drawable/moments"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp"
-            android:text="@string/friend" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/mall_weixin_iv"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawablePadding="5dp"
-            android:drawableTop="@drawable/wei_xin_login"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="@string/wechat" />
 
-        <TextView
-            android:id="@+id/mall_QQ_tv"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawablePadding="5dp"
-            android:drawableTop="@drawable/qq_login"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="@string/qq" />
+            <TextView
+                android:id="@+id/qq_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black"
+                android:text="@string/qq"
+                android:drawableTop="@drawable/qq_login" />
+
+            <TextView
+                android:id="@+id/wechat_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/wei_xin_login"
+                android:gravity="center"
+                android:padding="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black"
+                android:text="@string/wechat" />
+            <TextView
+                android:id="@+id/moments_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black"
+                android:text="@string/friend"
+
+                android:drawableTop="@drawable/moments" />
+            <TextView
+                android:id="@+id/sina_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="15dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black"
+                android:text="@string/sina"
+                android:drawableTop="@drawable/sina" />
+
+
+        </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>

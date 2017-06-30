@@ -55,7 +55,12 @@
 
         </RelativeLayout>
     </RelativeLayout>
-
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_height="match_parent" />
     <com.amap.api.maps.MapView
         android:id="@+id/myMap"
         android:layout_width="match_parent"

@@ -47,13 +47,30 @@ public class PhotoActivity extends BaseActivity implements OnItemCheckListener {
     @Override
     protected void initData() {
         mList = new ArrayList<>();
-        mList.add("https://ws1.sinaimg.cn/large/610dc034ly1ffxjlvinj5j20u011igri.jpg");
-        mList.add("https://ws1.sinaimg.cn/large/610dc034ly1ffxjlvinj5j20u011igri.jpg");
-        mList.add("https://ws1.sinaimg.cn/large/610dc034ly1ffxjlvinj5j20u011igri.jpg");
-        mList.add("https://ws1.sinaimg.cn/large/610dc034ly1ffxjlvinj5j20u011igri.jpg");
-        mList.add("https://ws1.sinaimg.cn/large/610dc034ly1ffxjlvinj5j20u011igri.jpg");
-        mList.add("https://ws1.sinaimg.cn/large/610dc034ly1ffxjlvinj5j20u011igri.jpg");
-        mList.add("https://ws1.sinaimg.cn/large/610dc034ly1ffxjlvinj5j20u011igri.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760758_3497.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760758_6667.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760757_3588.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760756_3304.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760755_6715.jpeg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760726_5120.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760726_8364.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760725_4031.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760724_9463.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760724_2371.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760707_4653.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760706_6864.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760706_9279.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760704_2341.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760704_5707.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760685_5091.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760685_4444.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760684_8827.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760683_3691.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760683_7315.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760663_7318.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760662_3454.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760662_5113.jpg");
+        mList.add("http://img.my.csdn.net/uploads/201508/05/1438760661_3305.jpg");
         adapter = new PhotoAdapter(mList, this);
         toastor = new Toastor(this);
         photoRv.setAdapter(adapter);

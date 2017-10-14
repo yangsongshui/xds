@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_left_menu_offset">140dp</dimen>
+    
+    <dimen name="menu_icon">40dp</dimen>
+    <!-- 中心圆圈图片的大小 -->
+    <dimen name="main_top_center">66dp</dimen>
+    <!-- 中心圆圈背景的大小 -->
+    <dimen name="main_top_center1">70dp</dimen>
+    
+    <!-- 顶部左右的小圆圈到左右的距离 -->
+    <dimen name="main_top_left_right">35dp</dimen>
+    
+    <!-- 顶部左右的小圆圈到顶部的距离 -->
+    <dimen name="margin_left_top">12dp</dimen>
+    
+    <!-- 中心到顶部的距离 -->
+    <dimen name="center_margin_top">50dp</dimen>
+    
+    <dimen name="refresh_margin_bottom">21dp</dimen>
+    
+            <!-- 水瓶图表到左边的距离 -->
+    <dimen name="water_margin_left">90dp</dimen>
+        <!-- 奶瓶图表到左边的距离 -->
+    <dimen name="nurse_margin_right">80dp</dimen>
+         <!-- 爱心图表到左边的距离 -->
+    <dimen name="love_margin_top">30dp</dimen>
+    
+    <!-- font size-->
+    <dimen name="text_size_8">8sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_26">26sp</dimen>
+    <dimen name="text_size_28">28sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_size_32">32sp</dimen>
+    
+     <dimen name="margin_5">5dp</dimen>
+     <dimen name="margin_6">6dp</dimen>
+     <dimen name="margin_9_5">9.5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+
+     <dimen name="margin_13">13dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_15_5">15.5dp</dimen>
+    <dimen name="margin_17">17dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_35">35dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_45">45dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_55">55dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_65">65dp</dimen>
+    <dimen name="margin_70">70dp</dimen>
+    <dimen name="margin_75">75dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+    <dimen name="margin_85">85dp</dimen>
+    <dimen name="margin_90">90dp</dimen>
+    <dimen name="margin_95">95dp</dimen>
+    <dimen name="margin_97">97dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_117">117dp</dimen>
+    <dimen name="margin_120">120dp</dimen>
+    <dimen name="margin_140">140dp</dimen>
+    <dimen name="margin_150">150dp</dimen>
+    <dimen name="margin_155">155dp</dimen>
+    <dimen name="margin_157">157dp</dimen>
+    <dimen name="margin_160">160dp</dimen>
+    <dimen name="margin_180">180dp</dimen>
+    <dimen name="margin_200">200dp</dimen>
+    <dimen name="margin_250">250dp</dimen>
+    <dimen name="margin_300">300dp</dimen>
+    <dimen name="margin_350">350dp</dimen>
+    <dimen name="margin_400">350dp</dimen>
+    <dimen name="margin_450">450dp</dimen>
+    <dimen name="margin_500">500dp</dimen>
+    <dimen name="margin_550">550dp</dimen>
+    <dimen name="margin_600">600dp</dimen>
+    <dimen name="margin_650">650dp</dimen>
+</resources>

@@ -1,0 +1,7 @@
+#Wed Aug 23 16:50:36 CST 2017
+base.0=D\:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_7c35f3e76324d767f0999731a47c4df55a16e020
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_c0ecaaa449a327d3c546df8703d62cae27a0bb64\\classes.dex
+base.1=D\:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_c0ecaaa449a327d3c546df8703d62cae27a0bb64
+file.0=D\:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_7c35f3e76324d767f0999731a47c4df55a16e020\\classes.dex

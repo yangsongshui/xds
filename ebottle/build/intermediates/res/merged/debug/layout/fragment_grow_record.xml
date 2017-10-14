@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:orientation="vertical"
+        >
+        
+       <FrameLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           >
+           <!--  
+	      <com.wsq.ebottle.widget.RecordBarView2
+		           android:id="@+id/view_record"
+		           android:layout_width="fill_parent"
+		           android:layout_height="fill_parent"
+	           />
+	       -->
+	        
+	       <HorizontalScrollView 
+	           android:id="@+id/h_scroll_view"
+	           android:layout_width="fill_parent"
+	           android:layout_height="fill_parent"
+	           android:scrollbars="none"
+	           >
+	           <com.wsq.ebottle.widget.MyLinearLayout
+	               android:id="@+id/content_parent"
+	               android:layout_width="wrap_content"
+	               android:layout_height="fill_parent"
+	               android:orientation="horizontal"
+	               >
+	           </com.wsq.ebottle.widget.MyLinearLayout>  
+	       </HorizontalScrollView>
+	       
+	       <RadioGroup
+	           android:id="@+id/radio_group_day_week"
+	           android:layout_width="@dimen/margin_100"
+	           android:layout_height="@dimen/margin_25"
+	           android:background="@drawable/red_frame_bg"
+	           android:layout_gravity="center_horizontal"
+	           android:layout_marginTop="3dp"
+	           android:orientation="horizontal"
+	           android:gravity="center_vertical"
+	           >
+	         <RadioButton 
+	             android:id="@+id/radio_day"
+	             android:layout_width="wrap_content"
+	             android:layout_height="@dimen/margin_25"
+	             android:layout_weight="1"
+	             android:text="日"
+	             android:button="@null"
+	             android:gravity="center"
+	             android:textSize="@dimen/text_size_16"
+	             android:background="@drawable/record_radio_text_bg_selector"
+	             android:textColor="@color/record_radio_text_selector"
+	             android:checked="true"
+	             />  
+	             
+	         <RadioButton 
+	             android:id="@+id/radio_week"
+	             android:layout_width="wrap_content"
+	             android:layout_height="@dimen/margin_25"
+	             android:layout_weight="1"
+	             android:text="周"
+	             android:button="@null"
+	             android:gravity="center"
+	             android:textSize="@dimen/text_size_16"
+	             android:background="@drawable/record_radio_text_bg_selector2"
+	             android:textColor="@color/record_radio_text_selector"
+	             />   
+	       </RadioGroup>
+        </FrameLayout>    
+        
+    </LinearLayout>
+   
+
+</LinearLayout>

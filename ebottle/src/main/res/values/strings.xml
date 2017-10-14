@@ -1,0 +1,135 @@
+<resources>
+
+    <string name="app_name">ebuttole</string>
+    <string name="menu_main">主页</string>
+    <string name="menu_baby_data">宝贝资料</string>
+    <string name="menu_grow_record">成长记录</string>
+    <string name="menu_baby_diary">宝宝日记</string>
+    <string name="menu_alert_setting">提醒设置</string>
+    <string name="menu_tem_setting">恒温设置</string>
+    <string name="menu_device_manager">设备管理</string>
+    <string name="love">时刻关爱</string>
+    <string name="nurse">喂奶</string>
+    <string name="water">饮水</string>
+    <string name="device_id">设备编号</string>
+    <string name="nurse_bottle_id">奶瓶编号：</string>
+    <string name="water_bottle_id">水瓶编号：</string>
+    <string name="baby_data">宝贝资料</string>
+    <string name="baby_name">宝贝名字：</string>
+    <string name="baby_birth">出生日期：</string>
+    <string name="baby_weight">宝贝重量：</string>
+    <string name="save_baby_data">保存宝贝资料</string>
+    <string name="male">男孩</string>
+    <string name="female">女孩</string>
+    <string name="add_diary">添加日记</string>
+    <string name="mom_write_diary">妈妈写日记</string>
+    <string name="weight">体重</string>
+    <string name="mood">心情</string>
+    <string name="diary_baby_weight">宝宝体重</string>
+    <string name="baby_mood">宝宝心情</string>
+    <string name="water_bottle">水瓶</string>
+    <string name="nurse_bottle">奶瓶</string>
+    <string name="nurse_alert">喂奶提醒</string>
+    <string name="alert_time">提醒时间：</string>
+    <string name="alert_way">提醒方式：</string>
+    <string name="ring">铃声：</string>
+     <string name="temp_alert">温度提醒</string>
+     <string name="temp_setting">温度设置：</string>
+     <string name="sync">同步</string>
+    <string name="water_time">饮水时间：</string>
+    <string name="def">默认</string>
+    <string name="average_water_temp">平均水温：</string>
+    <string name="average_temp">平均温度：</string>
+    <string name="temp_suitable">适合温度</string>
+    <string name="water_intake">饮水量：</string>
+    <string name="save_update">修改保存</string>
+    <string name="nurse_time">喂奶时间：</string>
+    <string name="interval_time">间隔时间：</string>
+    <string name="t_hour">3小时</string>
+    <string name="t_h_hour">3小时30分</string>
+    <string name="f_hour">4小时</string>
+    <string name="select_milk_powder">选择奶粉：</string>
+    <string name="recommand">推荐</string>
+    <string name="nurse_intake">喝奶量：</string>
+    <string name="end_time">结束时间：</string> 
+    <string name="prompt">提示</string>
+    <string name="exit_app">你确定要退出应用吗?</string>
+        <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+     <string name="dismiss">隐藏</string>
+     <string name="setting">设置</string>
+     <string name="save_success">保存成功</string>
+     
+     <string name="start_sterilize">启动消毒</string>
+    <string name="stop_sterilize">停止消毒</string>
+    
+    <string name="state_thermostat">恒温中</string>
+    <string name="state_sterilizing">正在消毒，谨防烫伤</string>
+    <string name="state_sterilized">消毒完成</string>
+    <string name="state_parch">干烧</string>
+    <string name="state_no_power">电源关闭</string>
+    
+    
+     <string-array name="array_nurse_alert_time">
+         <item>未设置</item>
+         <item>2小时后</item>
+         <item>2.5小时后</item>
+         <item>3小时后</item>
+         <item>3.5小时后</item>
+         <item>4小时后</item>
+     </string-array>
+     
+     <string-array name="array_nurse_alert_way">
+         <item>响铃,震动,文字</item>
+         <item>震动,文字</item>
+         <item>关闭所有</item>
+     </string-array>
+     
+      <string-array name="array_nurse_ring">
+         <item>小龙人</item>
+         <item>采一朵鲜花</item>
+         <item>哆啦A梦</item>
+         <item>铃儿响叮当</item>
+         <item>数鸭子</item>
+     </string-array>
+     
+      <string-array name="array_temp_setting">
+         <item>未设置</item>
+         <item>37摄氏度</item>
+         <item>38摄氏度</item>
+         <item>39摄氏度</item>
+         <item>40摄氏度</item>
+         <item>41摄氏度</item>
+     </string-array>
+    
+     <string name="tip1">妈妈，有点烫啊，晚点再喂宝贝吧！</string>
+     <string name="tip2">每天时刻关爱并提醒即将到来的喂奶时间。</string>
+     <string name="tip3">冲奶后当温度降低到合适的喂奶温度时。</string>
+     <string name="tip4">时刻关爱宝宝的每一天</string>
+      <string name="tip5">科学适量的饮水，为宝贝带来最健康的成长。</string>
+      <string name="tip6">*不填写时间，系统将视为默认时间</string>
+      <string name="tip7">*因季节变化，为了宝宝的身体健康，请水温保持在32-40度之间给宝宝饮用</string>
+      <string name="tip8">为了宝宝的健康成长</string>
+      <string name="tip9">了解更多的育儿知识请多多学习育儿宝典</string>
+      <string name="tip10">科学搭配营养奶粉，为宝贝带来最健康的成长。</string>
+      <string name="tip11">*根据宝宝的分体综合素质，了解各种品牌奶粉阶段性的特性，慎重合理的选择喂养宝宝的奶粉品牌</string>
+      <string name="tip12">宝宝5月21日</string>
+      <string name="tip13">建议：每四小时喂一次奶，每200~250毫升，每天由四顿奶改为三顿奶，逐渐用辅助食物从代替半顿开始到代替一顿奶。</string>
+      <string name="tip14">打开蓝牙来允许"ebottle"连接到配件</string>
+      <string name="tip15">奶水有些烫啊！晚些再喂宝宝吧！</string>
+      <string name="tip16">温度适合！可以喂宝宝了！</string>
+      <string name="tip17">长按"启动消毒"</string>
+      
+     <string name="alert1">低于32度</string>
+     <string name="alert2">最佳温度</string>
+     <string name="alert3">高于40度</string>
+     
+     <string name="hint_tip1">奶瓶编号（不可编辑）</string>
+     <string name="hint_tip2">水瓶编号（不可编辑）</string>
+     <string name="hint_tip3">YYYY年MM月dd日</string>
+     <string name="hint_tip4">体重0-20kg</string>
+     <string name="hint_tip5">宝宝心情</string>
+     
+     <!-- 错误信息 -->
+     <string name="ERROR_00001">保存失败，请填写完整信息</string>     
+</resources>

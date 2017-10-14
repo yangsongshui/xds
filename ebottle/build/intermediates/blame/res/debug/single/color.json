@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\debug\\color\\text_black_gray_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\color\\text_black_gray_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\debug\\color\\text_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\color\\text_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\debug\\color\\record_radio_text_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\color\\record_radio_text_selector.xml"
+    }
+]

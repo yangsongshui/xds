@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+    
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:id="@+id/layout_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin_55"
+            android:background="@drawable/main_top2"
+            >
+            <ImageView
+                android:id="@+id/img_left_open" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/left_btn"
+                android:scaleType="fitXY"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_13"
+                />   
+                
+            <TextView 
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成长记录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_20"
+                />
+                
+            <ImageView
+                android:id="@+id/img_home" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_home"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/margin_10"
+                />   
+                
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_30"
+            >
+       
+            <FrameLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        >
+		        <ImageView
+		            android:id="@+id/img_center_bg"
+		            android:layout_width="@dimen/main_top_center1"
+		            android:layout_height="@dimen/main_top_center1"
+		            android:padding="5dp"
+		            android:layout_gravity="center"
+		            android:background="@drawable/main_top_center"
+		            android:visibility="gone"
+		            />
+		        <com.wsq.ebottle.widget.CircleImageView
+		            xmlns:app="http://schemas.android.com/apk/res-auto"
+		            android:id="@+id/img_center"
+		            android:layout_width="@dimen/main_top_center"
+		            android:layout_height="@dimen/main_top_center"
+		            android:padding="5dp"
+		            android:layout_gravity="center"
+		            android:visibility="gone"
+		            />
+	        </FrameLayout>
+	        
+	        <ImageView 
+	            android:id="@+id/img_ly"
+	            android:layout_width="@dimen/main_top_left_right"
+	            android:layout_height="@dimen/main_top_left_right"
+	            android:src="@drawable/ly"
+	            android:layout_centerHorizontal="true"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="@dimen/margin_70"
+	            android:layout_marginTop="@dimen/margin_left_top"
+	            android:background="@drawable/main_top_left"
+	            android:padding="4dp"
+	            />
+	        <ImageView 
+	            android:id="@+id/img_dc"
+	            android:layout_width="@dimen/main_top_left_right"
+	            android:layout_height="@dimen/main_top_left_right"
+	            android:src="@drawable/dc1"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginRight="@dimen/margin_70"
+	            android:layout_marginTop="@dimen/margin_left_top"
+	            android:background="@drawable/main_top_right"
+	            android:padding="4dp"
+	            />
+	  
+	        
+        </RelativeLayout>
+        
+        
+    </FrameLayout>
+    
+
+</LinearLayout>

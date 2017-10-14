@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\raw\\cai.mp3",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\raw\\cai.mp3"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\raw\\xiao.mp3",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\raw\\xiao.mp3"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\raw\\ling.mp3",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\raw\\ling.mp3"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\raw\\duo.mp3",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\raw\\duo.mp3"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\raw\\shu.mp3",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\raw\\shu.mp3"
+    }
+]

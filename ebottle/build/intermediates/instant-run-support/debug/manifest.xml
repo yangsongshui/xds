@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wsq.ebottle"
+    android:versionCode="2"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="19" />
+
+    <!-- open bluetooth permisson -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- manage bluetooth device -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- ble feature -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="com.wsq.ebottle.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_ebottle"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.wsq.ebottle.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AnimationActivityStyle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.wsq.ebottle.broadcast.CountDownReceiver" >
+            <intent-filter>
+                <action android:name="com.wsq.ebottle" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.wsq.ebottle.service.AlertService" >
+            <intent-filter>
+                <action android:name="com.wsq.ebottle.service.action.AlertService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.wsq.ebottle.service.BlueToothLeService"
+            android:enabled="true" />
+
+        <activity
+            android:name="com.wsq.ebottle.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AnimationActivityStyle" >
+        </activity>
+        <activity
+            android:name="com.wsq.ebottle.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.wsq.ebottle.activity.AddDiaryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+
+        <provider
+            android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:authorities="com.wsq.ebottle.com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

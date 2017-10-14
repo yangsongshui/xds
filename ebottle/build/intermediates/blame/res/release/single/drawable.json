@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\houqi_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\houqi_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\right_btn_select.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\right_btn_select.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\check_box_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\check_box_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\custom_dialog_bg.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\custom_dialog_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\actionsheet_top_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\actionsheet_top_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\btn_water_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\btn_water_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\transparent_bg.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\transparent_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\white_gray_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\white_gray_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\left_btn.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\left_btn.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\left_btn_select.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\left_btn_select.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\red_frame_bg.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\red_frame_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\actionsheet_bottom_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\actionsheet_bottom_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\brown_frame_bg.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\brown_frame_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\btn_sterilize_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\btn_sterilize_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\sex_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\sex_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\actionsheet_single_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\actionsheet_single_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\check_right_btn.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\check_right_btn.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\red_bg2.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\red_bg2.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\txt_add_diary_bg.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\txt_add_diary_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\record_radio_text_bg_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\record_radio_text_bg_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\right_btn.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\right_btn.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\record_radio_text_bg_selector2.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\record_radio_text_bg_selector2.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\arrow_seletor.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\arrow_seletor.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\check_left_btn.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\check_left_btn.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\actionsheet_middle_selector.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\actionsheet_middle_selector.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\edit_bg.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\edit_bg.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\release\\drawable\\red_bg.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\drawable\\red_bg.xml"
+    }
+]

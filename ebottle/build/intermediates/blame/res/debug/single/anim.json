@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\debug\\anim\\welcome_anim.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\anim\\welcome_anim.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\debug\\anim\\activity_out_left.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\anim\\activity_out_left.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\debug\\anim\\activity_in_right.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\anim\\activity_in_right.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\debug\\anim\\push_up_in.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\anim\\push_up_in.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\debug\\anim\\push_up_out.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\anim\\push_up_out.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\res\\merged\\debug\\anim\\loading_animation.xml",
+        "source": "D:\\AndroidStudioProjects\\xds\\ebottle\\src\\main\\res\\anim\\loading_animation.xml"
+    }
+]

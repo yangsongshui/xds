@@ -1,0 +1,10 @@
+#Mon Jul 03 17:28:12 CST 2017
+renamed.2=classes2.dex
+renamed.1=classes.dex
+renamed.0=classes3.dex
+base.2=D\:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-21.0.3_e89b086a6627ff737517a06efe6140282c6950da
+base.1=D\:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_550ec2f27659e45132b3f4f1cbbe31806e3c5df6
+base.0=D\:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-21.0.3_aa16b3cf885393ef74ba8407c65bcf20627dd05b
+file.2=D\:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-21.0.3_e89b086a6627ff737517a06efe6140282c6950da\\classes.dex
+file.1=D\:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_550ec2f27659e45132b3f4f1cbbe31806e3c5df6\\classes.dex
+file.0=D\:\\AndroidStudioProjects\\xds\\ebottle\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-21.0.3_aa16b3cf885393ef74ba8407c65bcf20627dd05b\\classes.dex

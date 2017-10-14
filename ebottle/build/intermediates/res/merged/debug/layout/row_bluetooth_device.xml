@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/white_gray_selector"
+    >
+    
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_10"
+        >
+		    <TextView 
+		        android:id="@+id/txt_bluetooth_name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="sde12de4513"
+		        android:textColor="#000"
+		        android:textSize="@dimen/text_size_16"
+		        android:layout_alignParentLeft="true"
+		        />
+		    
+		     <TextView 
+		        android:id="@+id/txt_bluetooth_id"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="编号：13465"
+		        android:textColor="#000"
+		        android:textSize="@dimen/text_size_16" 
+		        android:layout_toRightOf="@+id/txt_bluetooth_name"
+		        android:layout_marginLeft="@dimen/margin_5"
+		        />
+		     <TextView 
+		        android:id="@+id/txt_bind"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="已绑定"
+		        android:textColor="#000"
+		        android:textSize="@dimen/text_size_16" 
+		        android:layout_marginLeft="@dimen/margin_5"
+		        android:layout_toRightOf="@+id/txt_bluetooth_id"
+		        android:visibility="invisible"
+		        />		    
+    </RelativeLayout>
+
+</LinearLayout>

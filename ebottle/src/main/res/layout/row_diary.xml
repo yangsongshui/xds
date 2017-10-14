@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/edit_bg"
+    >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10"
+        >
+	    <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/margin_20"
+	        >
+	        
+	        <TextView 
+	            android:id="@+id/txt_date"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="2015年12月12日"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_size_16"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="@dimen/margin_10"
+	            />
+	        
+	        <TextView 
+	            android:id="@+id/txt_week"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="星期天"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_size_16"
+	            android:layout_centerHorizontal="true"
+	            />
+	        <TextView 
+	            android:id="@+id/txt_time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="00:00"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_size_16"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="@dimen/margin_20"
+	            />
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/margin_20"
+	        >
+	        
+	        <TextView 
+	            android:id="@+id/txt_weight"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/diary_baby_weight"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_size_16"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="@dimen/margin_10"
+	            />
+	        <TextView 
+	            android:id="@+id/txt_mood"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/baby_mood"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_size_16"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="@dimen/margin_20"
+	            />
+	    </RelativeLayout>
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/margin_20"
+	        >
+	        <TextView 
+	            android:id="@+id/txt_des"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="你是一个好人或者是一额刹车四点斯柯达"
+	            android:textColor="@color/black"
+	            android:textSize="@dimen/text_size_16"
+	            />
+	    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
